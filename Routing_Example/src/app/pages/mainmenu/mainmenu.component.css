@@ -1,0 +1,13 @@
+.main-menu{
+    height: 400px;
+    background-color: rgb(241, 232, 165);
+}
+.parent-div{
+    background-color: rgba(255, 255, 0, 0.306);
+    height: 400px;
+}
+.parent-div p{
+    text-align: center;
+    font-size: 35px;
+    padding-top: 20px;
+}
