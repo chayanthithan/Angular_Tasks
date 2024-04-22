@@ -1,0 +1,11 @@
+.footer{
+    width: 100%;
+    background-color: rgb(125, 125, 253);
+    position: absolute;
+    top: 95%;
+    /* padding: 10px; */
+}
+.footer h4{
+    padding: 10px;
+    text-align: center;
+}

@@ -1,0 +1,20 @@
+<div class="menu-bar">
+    <div class="container">
+        <div class="logo">
+            <h2>Atputham</h2>
+        </div>
+        <div class="menu">
+          <ul>
+                  <li [routerLink]="['main-menu']">பிரதான மெனு</li>
+                  <li [routerLink]=" ['main-account']">பிரதான கணக‍்கு</li>
+                  <li [routerLink]=" ['farm-account']">பண்னண கணக‍்கு</li>
+                  <li [routerLink]=" ['house-keeping-account']">பராமரிப்புஇல்ல கணக‍்கு</li>
+                  <li [routerLink]=" ['mill-account']">அரைக்கும் ஆலை கணக‍்கு</li>
+          </ul>
+        </div>
+        <div class="logIn_Out">
+           <li><a href="#" (click)="displatContent()">logout</a></li>
+        </div>
+    </div>
+  </div>
+<router-outlet></router-outlet>
