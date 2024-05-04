@@ -1,0 +1,33 @@
+.card__todo{
+    display: flex;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 1px;
+    justify-content: flex-end;
+}
+.card__todo__name{
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-right: 30px;
+}
+.card__todo__edit button{
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: none;
+    margin-left: 60px;
+    background-color: #92babd;
+    color: green;
+    font-size: 15px;
+}
+.card__todo__delete button{
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: none;
+    margin-left: 10px;
+    background-color: #92babd;
+    color: red;
+    font-size: 15px;
+}
