@@ -1,11 +1,21 @@
 <div class="card__todo">
-    <div class="card__todo__name">
+    <div *ngIf="!isEdit" class="card__todo__name">
         {{this.todoName}}
     </div>
-    <div class="card__todo__edit">
-        <app-button btnName="Edit" bg_color="rgb(121, 162, 177)" txt_color="#026068"></app-button>
+    <div *ngIf="!isEdit"  class="card__todo__edit">
+        <app-button btnName="Edit" bg_color="rgb(121, 162, 177)" txt_color="#026068" (click)="this.toggleEdit()"></app-button>
     </div>
-    <div class="card__todo__delete">
-        <app-button btnName="Delete" bg_color="rgb(37, 204, 190)" txt_color="#026068"></app-button>
+    <div *ngIf="!isEdit"  class="card__todo__delete">
+        <app-button btnName="Delete" bg_color="rgb(37, 204, 190)" txt_color="#026068" (click)="this.todoService.appTodoDelete(this.id)"></app-button>
+    </div>
+
+    <div *ngIf="isEdit"  class="card__todo__name">
+        <input type="text" id="{{this.id}}" value="{{this.todoName}}">
+    </div>
+    <div *ngIf="isEdit"  class="card__todo__edit">
+        <app-button btnName="Save" bg_color="rgb(121, 162, 177)" txt_color="#026068" (click)="this.save()"></app-button>
+    </div>
+    <div *ngIf="isEdit"  class="card__todo__delete">
+        <app-button btnName="Cancel" bg_color="rgb(37, 204, 190)" txt_color="#026068" (click)="this.toggleEdit()"></app-button>
     </div>
 </div>

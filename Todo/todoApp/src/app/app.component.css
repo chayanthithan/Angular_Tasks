@@ -27,12 +27,15 @@
     border-radius: 8px;
 
 }
-/* .app__button button{
+.app__button{
+    display: flex;
+}
+.app__button button{
     padding: 17px 35px;
     margin-left: 20px;
     border: none;
     border-radius: 8px;
-} */
+}
 
 .app__data{
     display: flex;

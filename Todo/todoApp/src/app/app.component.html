@@ -4,19 +4,20 @@
       <div><h1>To-Do List App</h1></div>
     </div>
     <div class="app_search">
-      <div class="app__input">
-        <input type="text" placeholder="Enter Task..."/>
+        <div class="app__input">
+          <input id="inputData" type="text" placeholder="Enter Task..."/>
+        </div>
+        <div class="app__button">
+          <button  (click)="this.todoService.addTodo()">Add</button>
+        </div>
       </div>
-      <!-- <div class="app__button">
-        <button>Add</button>
-      </div> -->
-      <app-button btnName="ADD" bg_color="#70babd" txt_color="yellow"></app-button>
+      <!-- <app-button btnName="ADD" bg_color="#70babd" txt_color="yellow" ></app-button>
+    </div> -->
+    <div class="app__data" *ngFor="let todo of this.todoService.todo">
+      <app-card [todoName]="todo.todoName" [id]="todo.id"></app-card>
     </div>
-    <div class="app__data">
-      </div>
-      <app-card todoName="meeting 1"></app-card>
-      <app-card todoName="research meeting"></app-card>
-      <app-card todoName="birthday party"></app-card>
+      
+
    
     <!-- <div>
       <input type="radio" name="logger" [(ngModel)]="logger">user
