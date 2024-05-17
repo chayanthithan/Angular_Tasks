@@ -8,13 +8,16 @@
     justify-content: flex-end;
     width: 450px;
 }
+
 .card__todo__name{
     padding: 10px;
     border-radius: 8px;
     background-color: #fff;
     margin-right: 30px;
     width: 450px;
+    overflow: hidden;
 }
+
 .card__todo__edit button{
     padding: 15px 30px;
     border-radius: 8px;
@@ -25,6 +28,7 @@
     font-size: 15px;
     margin: auto;
 }
+
 .card__todo__delete button{
     padding: 15px 30px;
     border-radius: 8px;
@@ -34,4 +38,29 @@
     color: red;
     font-size: 15px;
     margin: auto;
+}
+@media (max-width:320px) {
+    .app__input{
+        /* margin: 10px;
+        border: none; */
+    }
+    .card__todo{
+        /* border: none; */
+        /* margin: 20px; */
+        width: 40%;
+        justify-content: center;
+        margin-left: 30px;
+        /* margin:auto; */
+    }
+    .app__button button{
+        padding: 0px 44px;
+        
+    }
+    
+}
+@media (max-width:375px) {
+    
+}
+@media (max-width:425px) {
+    
 }

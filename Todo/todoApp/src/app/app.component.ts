@@ -6,11 +6,11 @@ import { TodoServiceService } from './todo-service.service';
 import { CommonModule } from '@angular/common';
 import { Todo } from './todo';
 @Component({
-    selector: 'app-root',
-    standalone: true,
-    templateUrl: './app.component.html',
-    styleUrl: './app.component.css',
-    imports: [RouterOutlet, CardComponent, ButtonComponent,CommonModule]
+  selector: 'app-root',
+  standalone: true,
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css',
+  imports: [RouterOutlet, CardComponent, ButtonComponent,CommonModule]
 })
 export class AppComponent {
   title = 'todoApp';
@@ -19,7 +19,7 @@ export class AppComponent {
   // TodoServiceService: any;
   // constructor(private todoser:TodoServiceService){}  //this is alo another type of  dependency injection
   constructor(){
-    this.todoService.todo = JSON.parse(localStorage.getItem('todo')||'') as Todo[]   //this is for convert json to string
+    this.todoService.todo = JSON.parse(localStorage.getItem('todo') || '') as Todo[]   //this is for convert json to string
   }
   
 }

@@ -12,16 +12,16 @@ import { CommonModule } from '@angular/common';
 })
 export class CardComponent {
     todoService:TodoServiceService=inject(TodoServiceService)
-    @Input() todoName:string='';
-    @Input() id:number=0;
+    @Input() todoName:string = '';
+    @Input() id:number = 0;
 
-    isEdit:boolean=false;
+    isEdit:boolean = false;
 
     toggleEdit(){
-        this.isEdit=!this.isEdit;
+        this.isEdit = !this.isEdit;
     }
     save(){
-        let newValue=(document.getElementById(String(this.id)) as HTMLInputElement).value
+        let newValue = (document.getElementById(String(this.id)) as HTMLInputElement).value
         this.todoService.appTodoEdit(this.id,newValue)
         this. toggleEdit();
     }
