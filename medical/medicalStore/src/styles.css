@@ -11,7 +11,18 @@ body{
 :root{
     --primaryColor:#053B50;
     --secondaryColor:#176B87;
-    --textColor:#64CCC5;
-
-    
+    --textColor:#64CCC5; 
+    --home:#dbe1e1;
+}
+.icon__color{
+    color: white;
+    cursor: pointer;
+}
+.make__center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon__size{
+    font-size: 30px;
 }

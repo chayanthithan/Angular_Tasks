@@ -1,0 +1,13 @@
+.home{
+    background-color: var(--home);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 40px; */
+}
+.home__left{
+    width: 20%;
+}
+.home__right{
+    width: 80%;
+}

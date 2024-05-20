@@ -4,4 +4,11 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+    
+}
+.footer__wrapper{
+    color: white;
+}
+.footer__wrapper p{
+ text-align: center;
 }
