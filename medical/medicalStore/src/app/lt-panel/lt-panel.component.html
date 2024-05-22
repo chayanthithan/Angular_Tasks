@@ -1,41 +1,42 @@
 <div class="left__pannel">
    <div class="left__menu">
     <span class="left__menu__icon material-symbols-outlined">home</span>
-    <span class="left__menu__name">Home</span>
+    <span *ngIf="!mainservice.isMinimized" class="left__menu__name">Home</span>
    </div>
 
    <div class="left__menu">
       <span class="left__menu__icon material-symbols-outlined">boy</span>
-      <span class="left__menu__name">Student</span>
+      <span *ngIf="!mainservice.isMinimized" class="left__menu__name">Student</span>
+      <!--  [routerLink]="'student'" -->
    </div>
 
    <div class="left__menu">
       <span class="left__menu__icon material-symbols-outlined">supervisor_account</span>
-      <span class="left__menu__name">Teacher</span>
+      <span *ngIf="!mainservice.isMinimized" class="left__menu__name">Teacher</span>
    </div>
 
    <div class="left__menu">
       <span class="left__menu__icon material-symbols-outlined">description</span>
-      <span class="left__menu__name">Exam Result</span>
+      <span *ngIf="!mainservice.isMinimized" class="left__menu__name">Exam Result</span>
    </div>
 
    <div class="left__menu">
       <span class="left__menu__icon material-symbols-outlined">clinical_notes </span>
-      <span class="left__menu__name">Attendance</span>
+      <span *ngIf="!mainservice.isMinimized" class="left__menu__name">Attendance</span>
    </div>
 
    <div class="left__menu">
       <span class="left__menu__icon material-symbols-outlined">plagiarism</span>
-      <span class="left__menu__name">Search Report</span>
+      <span *ngIf="!mainservice.isMinimized" class="left__menu__name">Search Report</span>
    </div>
    
    <div class="left__menu">
       <span class="left__menu__icon material-symbols-outlined">mark_chat_unread</span>
-      <span class="left__menu__name">Notification</span>
+      <span *ngIf="!mainservice.isMinimized" class="left__menu__name">Notification</span>
    </div>
 
    <div class="left__menu">
       <span class="left__menu__icon material-symbols-outlined">settings</span>
-      <span class="left__menu__name">Setting</span>
+      <span *ngIf="!mainservice.isMinimized" class="left__menu__name">Setting</span>
    </div>
 </div>

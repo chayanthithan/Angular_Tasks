@@ -1,14 +1,15 @@
 .left__pannel{
     background-color:rgb(243, 243, 243);
     display: flex;
+    justify-content: flex;
     flex-direction: column;
 }
 .left__menu{
     display: flex;
     align-items: center;
+    justify-content: flex;
     background-color:white;
     margin-top: 5px;
-    /* margin-right:10px; */
     padding: 5px;
     border-radius: 0px 5px 5px 0px;
 }

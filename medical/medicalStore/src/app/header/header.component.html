@@ -1,6 +1,7 @@
 <div class="header">
     <div class="header__left">
-        <span class="material-symbols-outlined icon__color icon__size">menu</span>
+        <span *ngIf="!mainService.isMinimized" class="material-symbols-outlined icon__color icon__size" (click)="mainService.toggle()">menu</span>
+        <span *ngIf="mainService.isMinimized" class="material-symbols-outlined icon__color icon__size" (click)="mainService.toggle()"> menu_open</span>
         <img class="header__medi__logo " src="../../assets/medi_logo.png" alt="medi_logo">
     </div>
     <div class="header__right">

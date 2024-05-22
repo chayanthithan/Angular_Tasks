@@ -2,12 +2,17 @@
     background-color: var(--home);
     display: flex;
     align-items: center;
-    justify-content: center;
-    /* padding: 40px; */
+    justify-content: flex-start;
 }
 .home__left{
-    width: 18%;
+    width: 12%;
+}
+.left__mini{
+    width: 5%;
 }
 .home__right{
-    width: 82%;
+    width: 88%;
+}
+.right__mini{
+    width: 95%;
 }
