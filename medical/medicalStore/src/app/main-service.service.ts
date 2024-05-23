@@ -7,7 +7,7 @@ export class MainServiceService {
 
   constructor() { }
 
-  isMinimized:boolean=false;
+  isMinimized:boolean=true;
   toggle(){
     this.isMinimized = !this.isMinimized;
   }

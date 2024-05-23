@@ -3,6 +3,7 @@
     display: flex;
     justify-content: flex;
     flex-direction: column;
+    height: 80vh;
 }
 .left__menu{
     display: flex;
@@ -12,10 +13,12 @@
     margin-top: 5px;
     padding: 5px;
     border-radius: 0px 5px 5px 0px;
+    
 }
 .left__menu:hover{
     background-color: var(--secondaryColor);
     color:white;
+    
 }
 .left__menu__icon{
     font-size:30px;

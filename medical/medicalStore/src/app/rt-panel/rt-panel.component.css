@@ -1,4 +1,6 @@
 .right__pannel{
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     padding-top: 20px;
+    height: 76vh;
+    padding: 2vh;
 }

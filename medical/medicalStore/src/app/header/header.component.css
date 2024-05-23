@@ -1,6 +1,6 @@
 .header{
     background-color: var(--primaryColor);
-    height: 70px;
+    height: 10vh;
     position:sticky;
     display: flex;
     justify-content: space-between;
