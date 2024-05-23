@@ -1,1 +1,45 @@
-<p>teachers works!</p>
+<div class="students">
+    <div *ngIf="!isAddNewStudent" class="student__list">
+        <div class="students__list__header">
+            <div class="students__list__title">
+                Teahers main details
+            </div>
+            <div class="student__list__options">
+                <button><span class="material-symbols-outlined">person_add</span>AddNew</button>
+            </div>
+        </div>
+        <div class="student__list__table">
+            <table>
+                <thead>
+                    <tr class="student__table__thead">
+                        <th>id</th>
+                        <th>firstname</th>
+                        <th>lastname</th>
+                        <th>DOB</th>
+                        <th>gender</th>
+                        <th>address</th>
+                        <th>district</th>
+                        <th>contact</th>
+                        <th>grade</th>
+                    </tr>
+                </thead>
+                <tbody class="student__table__tbody" *ngFor="let item of teachers">
+                    <tr>
+                        <td>{{item.id}}</td>
+                        <td>{{item.first_name}}</td>
+                        <td>{{item.last_name}}</td>
+                        <td>{{item.dob}}</td>
+                        <td>{{item.gender}}</td>
+                        <td>{{item.address}}</td>
+                        <td>{{item.district}}</td>
+                        <td>{{item.contact}}</td>
+                        <td>{{item.grade}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div *ngIf="isAddNewStudent" class="students__addNew">
+
+    </div>
+</div>

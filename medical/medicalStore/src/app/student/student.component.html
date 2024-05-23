@@ -1,8 +1,8 @@
 <div class="students">
-    <div *ngIf="!isAddNew" class="student__list">
+    <div *ngIf="!isAddNewStudent" class="student__list">
         <div class="students__list__header">
             <div class="students__list__title">
-                student main details
+                Student main details
             </div>
             <div class="student__list__options">
                 <button><span class="material-symbols-outlined">person_add</span>AddNew</button>
@@ -39,7 +39,7 @@
             </table>
         </div>
     </div>
-    <div *ngIf="isAddNew" class="students__addNew">
+    <div *ngIf="isAddNewStudent" class="students__addNew">
 
     </div>
 </div>

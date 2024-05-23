@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './student.component.css'
 })
 export class StudentComponent {
-  isAddNew:boolean = false;
+  isAddNewStudent:boolean = false;
 
   student=[
     {id:'1',first_name:'chayan',last_name:'kumar',dob:'1999-12-14',gender:'male',address:'uthayanager west',district:'kilinochchi',contact:'07632441578',grade:'12'},
