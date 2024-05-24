@@ -10,21 +10,22 @@
         </div>
         <div class="student__list__table">
             <table>
-                <thead>
-                    <tr class="student__table__thead">
-                        <th>id</th>
-                        <th>firstname</th>
-                        <th>lastname</th>
+                <thead class="student__table__thead">
+                    <tr class="student__table__thead__tr">
+                        <th>Id</th>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
                         <th>DOB</th>
-                        <th>gender</th>
-                        <th>address</th>
-                        <th>district</th>
-                        <th>contact</th>
-                        <th>grade</th>
+                        <th>Gender</th>
+                        <th>Address</th>
+                        <th>District</th>
+                        <th>Contact</th>
+                        <th>Grade</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody class="student__table__tbody" *ngFor="let item of student">
-                    <tr>
+                    <tr class="student__table__tbody__tr">
                         <td>{{item.id}}</td>
                         <td>{{item.first_name}}</td>
                         <td>{{item.last_name}}</td>
@@ -34,6 +35,10 @@
                         <td>{{item.district}}</td>
                         <td>{{item.contact}}</td>
                         <td>{{item.grade}}</td>
+                        <td>
+                            <button class="student__edit__button"><span class="student__edit material-symbols-outlined">edit</span></button>
+                            <button class="student__delete__button"><span class="student__delete material-symbols-outlined">delete</span></button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
