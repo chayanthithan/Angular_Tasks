@@ -1,3 +1,6 @@
+.student__list__options{
+    padding: 5px;
+}
 .students__list__header{
     display: flex;
     justify-content: space-between;
@@ -24,11 +27,135 @@
    justify-content: center;
    align-items: center;
    margin: auto;
+   padding-top: 10px;
+   background-color: rgb(180, 228, 229);
 }
-.student__table__thead > th{
-    padding:0px 0px 10px;
+
+.student__table__thead__tr > th{
+    padding: 5px 10px;
+    margin-top: 10px;
+    font-size: large;
+    text-align: center;
     /* border: 1px solid yellow; */
 }
-.student__table__tbody > tr{
-    margin: 10px 0px;
+
+.student__table__tbody{
+    /* background-color: var(--textColor); */
 }
+.student__table__tbody > tr{
+    border: 1px solid red;
+}
+.student__table__tbody__tr > td{
+    /* border: 1px solid black; */
+    padding: 5px 15px;
+}
+.student__delete{
+   color: red;
+}
+.student__delete__button,.student__edit__button{
+    margin-left: 5px;
+    outline: none;
+}
+.student__edit__button:hover{
+    background-color:rgb(7, 129, 74);
+    outline: none;
+}
+.student__delete__button:hover{
+    background-color:red;
+    outline: none;
+}
+.student__edit{
+   color: rgb(7, 129, 74);
+}
+.student__edit:hover{
+    color: rgb(255, 255, 255);
+ }
+ .student__delete:hover{
+    color: rgb(255, 255, 255);
+ }
+
+
+
+ /* form css*/
+ .form__contant{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    /* border: 1px solid black; */
+ }
+ .form__fields{
+    width: 70%;
+ }
+ .form__fields > form > table > tr > td{
+    margin-top: 5px;
+ }
+ .form__fields > form > table > tr > td:nth-child(1){
+    text-align: right;
+    padding-right: 20px;
+ }
+form > table{
+    width: 100%;
+}
+ .form__img{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid black; */
+ }
+ .form__img img{
+   height: 100%;
+   width: 80%;
+
+ }
+ .form__img button{
+    margin-top: 20px;
+    padding: 2%;
+    width: 80%;
+    background-color: var(--secondaryColor);
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+ .span__data{
+    width: 30%;
+    font-size: large;
+ }
+.input__data{
+    width: 60%;
+    padding:8px 15px;
+    margin-top: 8px;
+    outline: none;
+    border: none;
+    /* text-align: center; */
+}
+.select__data{
+    width: 66%;
+
+    /* border: 1px solid black; */
+}
+.form__Actions{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 23.8%;
+    outline: none;
+    border: none;
+    /* border: 1px solid black; */
+ }
+ .form__Actions button{
+    width: 30%;
+    padding:8px 20px;
+    background-color: var(--secondaryColor);
+    outline: none;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    color: white;
+ }
+ 
+ 

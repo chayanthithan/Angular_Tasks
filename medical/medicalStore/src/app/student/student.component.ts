@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './student.component.css'
 })
 export class StudentComponent {
-  isAddNewStudent:boolean = true;
+  isAddNewStudent:boolean = false;
 
   student=[
     {id:'1',first_name:'chayan',last_name:'kumar',dob:'1999-12-14',gender:'male',address:'uthayanager west',district:'kilinochchi',contact:'07632441578',grade:'12'},
@@ -18,4 +18,7 @@ export class StudentComponent {
     {id:'5',first_name:'rajan',last_name:'rojan',dob:'1999-12-19',gender:'female',address:'salampaikulam',district:'jaffna',contact:'0763244150',grade:'12'},
     {id:'6',first_name:'paratta',last_name:'valu',dob:'1999-12-20',gender:'male',address:'uthayanager west',district:'vavuniya',contact:'0763244150',grade:'1'},
   ]
+  changeValue(){
+    this.isAddNewStudent = !this.isAddNewStudent;
+  }
 }

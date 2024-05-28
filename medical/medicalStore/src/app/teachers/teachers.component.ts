@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
 })
 export class TeachersComponent {
 
-  isAddNewStudent:boolean = false;
+  isAddNewTeacher:boolean = false;
   teachers=[
     {id:'1',first_name:'chayan',last_name:'kumar',dob:'1999-12-14',gender:'male',address:'uthayanager west',district:'kilinochchi',contact:'07632441578',grade:'12'},
     {id:'2',first_name:'kuppan',last_name:'saamy',dob:'1999-12-16',gender:'female',address:'vadakkuppaddi',district:'jaffna',contact:'0763244156',grade:'14'},
@@ -19,4 +19,7 @@ export class TeachersComponent {
     {id:'6',first_name:'paratta',last_name:'valu',dob:'1999-12-20',gender:'male',address:'uthayanager west',district:'vavuniya',contact:'0763244150',grade:'1'},
   ]
 
+  changeValue(){
+    this.isAddNewTeacher = !this.isAddNewTeacher;
+  }
 }

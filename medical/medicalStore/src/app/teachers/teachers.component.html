@@ -1,17 +1,17 @@
 <div class="students">
-    <div *ngIf="!isAddNewStudent" class="student__list">
+    <div *ngIf="!isAddNewTeacher" class="student__list">
         <div class="students__list__header">
             <div class="students__list__title">
                 Teahers main details
             </div>
             <div class="student__list__options">
-                <button><span class="material-symbols-outlined">person_add</span>AddNew</button>
+                <button (click)="changeValue()"><span class="material-symbols-outlined">person_add</span>AddNew</button>
             </div>
         </div>
         <div class="student__list__table">
             <table>
-                <thead>
-                    <tr class="student__table__thead">
+                <thead class="student__table__thead">
+                    <tr class="student__table__thead__tr">
                         <th>id</th>
                         <th>firstname</th>
                         <th>lastname</th>
@@ -21,6 +21,7 @@
                         <th>district</th>
                         <th>contact</th>
                         <th>grade</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody class="student__table__tbody" *ngFor="let item of teachers">
@@ -34,12 +35,70 @@
                         <td>{{item.district}}</td>
                         <td>{{item.contact}}</td>
                         <td>{{item.grade}}</td>
+                        <td>
+                            <button class="student__edit__button"><span class="student__edit material-symbols-outlined">edit</span></button>
+                            <button class="student__delete__button"><span class="student__delete material-symbols-outlined">delete</span></button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
-    <div *ngIf="isAddNewStudent" class="students__addNew">
-
+    <div *ngIf="isAddNewTeacher" class="student__addNew">
+        <div class="form__contant">
+            <div class="form__fields">
+                <form action="">
+                    <table>
+                        <tr>
+                            <td><span class="span__data">First Name</span></td>
+                            <td><input class="input__data" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><span class="span__data">Last Name</span></td>
+                            <td><input class="input__data" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><span class="span__data">DOB</span></td>
+                            <td><input class="input__data" type="date"></td>
+                        </tr>
+                        <tr>
+                            <td><span class="span__data">Gender</span></td>
+                            <td>
+                                <select name="" id="" class="input__data select__data">
+                                    <option value="">Male</option>
+                                    <option value="">Female</option>
+                                    <option value="">prefer to say no</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="span__data">District</span></td>
+                            <td><input class="input__data" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><span class="span__data">Address</span></td>
+                            <td><textarea class="input__data" ></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><span class="span__data">Contact No</span></td>
+                            <td><input class="input__data" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><span class="span__data">Grade</span></td>
+                            <td><input class="input__data" type="text"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="form__img">
+                <img src="../../assets/teacher2.jpeg" alt="">
+                <button>Add Teacher</button>
+            </div>
+        </div>
+        <div class="form__Actions">
+            <button>Save</button>
+            <button>Cancel</button>
+            <button (click)="changeValue()">Close</button>
+        </div>
     </div>
 </div>

@@ -5,7 +5,7 @@
                 Student main details
             </div>
             <div class="student__list__options">
-                <button><span class="material-symbols-outlined">person_add</span>AddNew</button>
+                <button (click)="changeValue()"><span class="material-symbols-outlined">person_add</span>AddNew</button>
             </div>
         </div>
         <div class="student__list__table">
@@ -98,7 +98,7 @@
         <div class="form__Actions">
             <button>Save</button>
             <button>Cancel</button>
-            <button>Close</button>
+            <button (click)="changeValue()">Close</button>
         </div>
     </div>
 </div>

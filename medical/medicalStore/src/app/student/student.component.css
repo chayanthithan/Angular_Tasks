@@ -126,6 +126,8 @@ form > table{
     width: 60%;
     padding:8px 15px;
     margin-top: 8px;
+    outline: none;
+    border: none;
     /* text-align: center; */
 }
 .select__data{
@@ -148,6 +150,7 @@ form > table{
     outline: none;
     border: none;
     margin-top: 20px;
+    cursor: pointer;
  }
  
  
