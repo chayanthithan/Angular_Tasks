@@ -1,10 +1,11 @@
+
 <div class="students">
-    <div *ngIf="!isAddNewTeacher" class="student__list">
+    <div class="student__list">
         <div class="students__list__header">
             <div class="students__list__title">
-                Teahers main details
+                Exam Result Details
             </div>
-            <a routerLink="/add-teacher" class="student__list__options">
+            <a routerLink="/add-examresult" class="student__list__options">
                 <button ><span class="material-symbols-outlined">person_add</span>AddNew</button>
             </a>
         </div>
@@ -12,19 +13,21 @@
             <table>
                 <thead class="student__table__thead">
                     <tr class="student__table__thead__tr">
-                        <th>id</th>
-                        <th>firstname</th>
-                        <th>lastname</th>
-                        <th>DOB</th>
-                        <th>gender</th>
-                        <th>address</th>
-                        <th>district</th>
-                        <th>contact</th>
-                        <th>grade</th>
+                        <th>Id</th>
+                        <th>Student Name</th>
+                        <th>Grade</th>
+                        <th>Term</th>
+                        <th>Total Marks</th>
+                        <th>Average</th>
+                        <th>Teacher's Option</th>
+                        <th>Teacher Name</th>
+                        <th>Attend Days</th>
+                        <th>TSD</th>
+                        <th>TED</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
-                <tbody class="student__table__tbody" *ngFor="let item of teacherObj">
+                <!-- <tbody class="student__table__tbody" *ngFor="let item of teacherObj">
                     <tr>
                         <td>{{item.id}}</td>
                         <td>{{item.first_name}}</td>
@@ -40,7 +43,7 @@
                             <button class="student__delete__button"><span class="student__delete material-symbols-outlined">delete</span></button>
                         </td>
                     </tr>
-                </tbody>
+                </tbody> -->
             </table>
         </div>
     </div>

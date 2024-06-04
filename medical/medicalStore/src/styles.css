@@ -1,11 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
 *{
     margin: 0px;
     padding: 0px;
 }
 
 body{
-    height: 100vh;
+    min-height: 100vh;
     background-color: rgb(235, 241, 241);
 }
 :root{

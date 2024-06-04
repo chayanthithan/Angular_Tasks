@@ -1,0 +1,62 @@
+
+.add__result__details{
+    display: flex;
+    margin: auto;
+}
+.add__result__fields{
+    width: 40%;
+    margin: auto;
+}
+
+.add__result__input form > table > tr {
+    width: 100%;
+}
+.add__result__input form > table > tr > td:nth-child(1){
+     width: 30%;
+    padding: 3px; 
+} 
+
+.add__result__input form > table > tr > td > input,select {
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 8px;
+    border-radius: 5px;
+    
+    /* padding */
+}
+
+.add__result__input form > table > tr > td > select{
+    width: 100%;
+}
+.add__result__input form > table > tr > td > label {
+    width: 100%;
+    padding: 5px;
+    /* padding */
+}
+.add__marks__fields{
+    width: 55%;
+}
+.add__result__btn button{
+    padding:8px 25px;
+    margin-right: 3%;
+    width: 30%;
+    margin-top: 30px;
+    background-color:var(--secondaryColor);
+    color: white;
+    border: none;
+    outline: none;
+    font-size: medium;
+}
+.add__result__btn button:hover{
+    padding:8px 25px;
+    margin-right: 3%;
+    margin-top: 30px;
+    color:var(--secondaryColor);
+    background-color: white;
+    border: none;
+    outline: none;
+    font-size: medium;
+    cursor: pointer;
+}

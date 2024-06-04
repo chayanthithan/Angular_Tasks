@@ -1,12 +1,12 @@
 <div class="students">
-    <div *ngIf="!isAddNewStudent" class="student__list">
+    <div class="student__list">
         <div class="students__list__header">
             <div class="students__list__title">
                 Student main details
             </div>
-            <div class="student__list__options">
-                <button (click)="changeValue()"><span class="material-symbols-outlined">person_add</span>AddNew</button>
-            </div>
+            <a routerLink="/addnew" class="student__list__options">
+                <button><span class="material-symbols-outlined">person_add</span>AddNew</button>
+            </a>
         </div>
         <div class="student__list__table">
             <table>
@@ -24,7 +24,7 @@
                         <th>Actions</th>
                     </tr>
                 </thead>
-                <tbody class="student__table__tbody" *ngFor="let item of student">
+                <tbody class="student__table__tbody" *ngFor="let item of studentObj">
                     <tr class="student__table__tbody__tr">
                         <td>{{item.id}}</td>
                         <td>{{item.first_name}}</td>
@@ -44,27 +44,27 @@
             </table>
         </div>
     </div>
-    <div *ngIf="isAddNewStudent" class="students__addNew">
+    <!-- <div *ngIf="isAddNewStudent" class="students__addNew">
         <div class="form__contant">
             <div class="form__fields">
-                <form action="">
+                <form action="" [formGroup]="studentReactiveForm">
                     <table>
                         <tr>
                             <td><span class="span__data">First Name</span></td>
-                            <td><input class="input__data" type="text"></td>
+                            <td><input formControlName="first_name" class="input__data" type="text"></td>
                         </tr>
                         <tr>
                             <td><span class="span__data">Last Name</span></td>
-                            <td><input class="input__data" type="text"></td>
+                            <td><input formControlName="last_name" class="input__data" type="text"></td>
                         </tr>
                         <tr>
                             <td><span class="span__data">DOB</span></td>
-                            <td><input class="input__data" type="date"></td>
+                            <td><input formControlName="dob" class="input__data" type="date"></td>
                         </tr>
                         <tr>
                             <td><span class="span__data">Gender</span></td>
                             <td>
-                                <select name="" id="" class="input__data select__data">
+                                <select formControlName="gender" name="" id="" class="input__data select__data">
                                     <option value="">Male</option>
                                     <option value="">Female</option>
                                     <option value="">prefer to say no</option>
@@ -73,19 +73,19 @@
                         </tr>
                         <tr>
                             <td><span class="span__data">District</span></td>
-                            <td><input class="input__data" type="text"></td>
+                            <td><input formControlName="district" class="input__data" type="text"></td>
                         </tr>
                         <tr>
                             <td><span class="span__data">Address</span></td>
-                            <td><textarea class="input__data" ></textarea></td>
+                            <td><textarea formControlName="description" class="input__data" ></textarea></td>
                         </tr>
                         <tr>
                             <td><span class="span__data">Contact No</span></td>
-                            <td><input class="input__data" type="text"></td>
+                            <td><input formControlName="contact" class="input__data" type="text"></td>
                         </tr>
                         <tr>
                             <td><span class="span__data">Grade</span></td>
-                            <td><input class="input__data" type="text"></td>
+                            <td><input formControlName="grade" class="input__data" type="text"></td>
                         </tr>
                     </table>
                 </form>
@@ -96,9 +96,10 @@
             </div>
         </div>
         <div class="form__Actions">
-            <button>Save</button>
+            <button (click)="onSubmit()">Save</button>
             <button>Cancel</button>
             <button (click)="changeValue()">Close</button>
         </div>
-    </div>
+    </div> -->
+
 </div>

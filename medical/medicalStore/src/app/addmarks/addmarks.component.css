@@ -1,0 +1,114 @@
+
+.student__list__table > table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.student__table__thead__tr > th{
+    padding: 10px;
+}
+.student__delete{
+   color: red;
+}
+.student__delete__button,.student__edit__button{
+    margin-left: 5px;
+    outline: none;
+    border: none;
+}
+.student__edit__button:hover{
+    background-color:rgb(7, 129, 74);
+    outline: none;
+}
+.student__delete__button:hover{
+    background-color:red;
+    outline: none;
+}
+.student__edit{
+   color: rgb(7, 129, 74);
+}
+.student__edit:hover{
+    color: rgb(255, 255, 255);
+ }
+ .student__delete:hover{
+    color: rgb(255, 255, 255);
+ }
+
+
+
+ /* form css*/
+
+ 
+ /* table */
+ /* .marks__input table{
+    display: flex;
+    margin-bottom: 10px;
+    
+ } */
+ .marks__input > table > tr > td > input{
+    padding: 7px;
+    border-radius: 5px;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid black;
+ }
+ .marks__input button{
+    padding:10px 25px;
+    border-radius: 5px;
+    background-color:var(--secondaryColor);
+    color: white;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    border: 1px solid var(--secondaryColor);
+ }
+ .marks__input button:hover{
+    padding:10px 25px;
+    border-radius: 10px;
+    color:var(--secondaryColor);
+    background-color: white;
+    border: 1px solid var(--secondaryColor);
+ }
+ .marks__input > form > table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    border-radius: 5px;
+ }
+ .marks__input > table > tr > td:nth-child(1){
+   padding:0px 10px;
+ }
+ .add__marks__btn{
+    display: flex;
+    justify-content: right;
+ }
+ 
+ .add__marks__btn button{
+    padding:10px 25px;
+    border-radius: 5px;
+    border: 1px solid var(--secondaryColor);
+    color: var(--secondaryColor);
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+ }
+ .add__marks__btn button:hover{
+    padding:10px 25px;
+    border-radius: 5px;
+    background-color:var(--secondaryColor);
+    color: white;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+ }
+ .student__list__table > table{
+    flex: none;
+ }

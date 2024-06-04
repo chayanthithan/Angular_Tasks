@@ -1,0 +1,77 @@
+<div class="examresult">
+   
+    <div class="add__result__details">
+        <div class="add__result__fields">
+            <div class="add__result__input">
+                <form action="">
+                    <table>
+                        <tr>
+                            <td><label for="">Select Student</label><br></td>
+                            <td><select id="select__student">
+                                <option value=""></option>
+                                <option value="" *ngFor="let items of this.student">{{items.first_name}} {{items.last_name}}</option>
+                            </select ></td>
+                        </tr>
+                        <tr>
+                            <td><label>Grade</label></td>
+                            <td><input id="grade" type="text">  </td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Term</label></td>
+                            <td>
+                                <select id="term">
+                                    <option value=""></option>
+                                    <option value="" >First Term</option>
+                                    <option value="" >Second Term</option>
+                                    <option value="" >Third Term</option>
+                                </select >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Total Marks</label></td>
+                            <td><input id="totalmarks" type="text">  </td>
+                        </tr>
+                        <tr>
+                            <td><label>Average</label></td>
+                            <td><input id="average" type="number">  </td>
+                        </tr>
+                        <tr>
+                            <td><label>Teacher's Opinion</label></td>
+                            <td><input id="teacherOpinion" type="text">  </td>
+                        </tr>
+                        <tr>
+                            
+                            <td><label for="">Teacher Name</label></td>
+                            <td>
+                                <select id="teachername">
+                                    <option value=""></option>
+                                    <option value="" *ngFor="let items of this.teacher">{{items.first_name}}{{items.last_name}}</option>
+                                </select >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Attend Days</label></td>
+                            <td><input id="attenddays" type="number">  </td>
+                        </tr>
+                        <tr>
+                            <td><label>Term Start Date</label></td>
+                            <td><input id="tsd" type="date">  </td>
+                        </tr>
+                        <tr>
+                            <td><label>Term End Date</label></td>
+                            <td><input id="ted" type="date">  </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="add__result__btn">
+                <button (click)="resultservice.addResult()">save</button>
+                <button>clear</button>
+                <button>close</button>
+            </div>
+        </div>
+        <div class="add__marks__fields">
+            <app-addmarks></app-addmarks>
+        </div>
+    </div>
+</div>

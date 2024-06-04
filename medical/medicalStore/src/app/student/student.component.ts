@@ -1,24 +1,72 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { StudentService } from '../services/student.service';
+import { Student } from '../student';
+import { FormGroup } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
+import { TableModule } from 'primeng/table';
 @Component({
   selector: 'app-student',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,ReactiveFormsModule,RouterLink,TableModule],
   templateUrl: './student.component.html',
   styleUrl: './student.component.css'
 })
-export class StudentComponent {
+export class StudentComponent implements OnInit{
+  studentObj:Student[]=[];
   isAddNewStudent:boolean = false;
+  studentReactiveForm!: FormGroup;
+  student={
+    id:'',
+    first_name:'',
+    last_name:'',
+    dob:'',
+    gender:'',
+    address:'',
+    district:'',
+    contact:'',
+    grade:''
+};
+  constructor(private studentService:StudentService){
+   
+  }
 
-  student=[
-    {id:'1',first_name:'chayan',last_name:'kumar',dob:'1999-12-14',gender:'male',address:'uthayanager west',district:'kilinochchi',contact:'07632441578',grade:'12'},
-    {id:'2',first_name:'kuppan',last_name:'saamy',dob:'1999-12-16',gender:'female',address:'vadakkuppaddi',district:'jaffna',contact:'0763244156',grade:'14'},
-    {id:'3',first_name:'suppan',last_name:'velu',dob:'1999-12-17',gender:'male',address:'skanthapuram',district:'kilinochchi',contact:'0763244150',grade:'16'},
-    {id:'4',first_name:'kanthan',last_name:'kunaa',dob:'1999-12-18',gender:'male',address:'akkarajan',district:'vavuniya',contact:'0763244134',grade:'17'},
-    {id:'5',first_name:'rajan',last_name:'rojan',dob:'1999-12-19',gender:'female',address:'salampaikulam',district:'jaffna',contact:'0763244150',grade:'12'},
-    {id:'6',first_name:'paratta',last_name:'valu',dob:'1999-12-20',gender:'male',address:'uthayanager west',district:'vavuniya',contact:'0763244150',grade:'1'},
-  ]
+  ngOnInit(): void {
+    this.studentReactiveForm = new FormGroup({
+      id:new FormGroup('',),
+      first_name:new FormGroup('',),
+      last_name:new FormGroup('',),
+      dob:new FormGroup('',),
+      gender:new FormGroup('',),
+      address:new FormGroup('',),
+      district:new FormGroup('',),
+      contact:new FormGroup('',),
+      grade: new FormGroup('',),
+    })
+
+    this.studentObj = this.studentService.sendStudent();
+  }
+  
   changeValue(){
     this.isAddNewStudent = !this.isAddNewStudent;
   }
+
+  onSubmit(){
+    debugger
+      if(this.studentReactiveForm.valid){
+        this.student.first_name=this.studentReactiveForm.get('first_name')?.value,
+        this.student.last_name=this.studentReactiveForm.get('last_name')?.value,
+        this.student.dob=this.studentReactiveForm.get('dob')?.value,
+        this.student.gender=this.studentReactiveForm.get('gender')?.value,
+        this.student.address=this.studentReactiveForm.get('address')?.value,
+        this.student.district=this.studentReactiveForm.get('district')?.value,
+        this.student.contact=this.studentReactiveForm.get('contact')?.value,
+        this.student.grade=this.studentReactiveForm.get('grade')?.value
+        this.studentObj.push(this.student);
+      }
+  }
+  
+
+  
 }

@@ -1,0 +1,51 @@
+<div class="students">
+    <div class="student__list">
+        <div class="marks__input">
+            <form [formGroup]="this.marksractiveForm"  action="">
+            <table>
+                <tr>
+                    <td><label for="">Subject</label></td>
+                    <td><input formControlName="subject_name" type="text"></td>
+                </tr>
+                <tr>
+                    <td><label for="">marks</label></td>
+                    <td><input formControlName="marks" type="number"></td>
+                </tr>
+                <tr>
+                    <button (click)="addMarks()">Add</button>
+                </tr>
+            </table>
+        </form>
+        </div>
+        <div class="student__list__table">
+            <!-- <table> -->
+                <thead class="student__table__thead">
+                    <tr class="student__table__thead__tr">
+                        <th>Id</th>
+                        <th>subject</th>
+                        <th>marks</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <!-- <tbody  > -->
+                    <tr class="" *ngFor="let item of this.subjectList">
+                        <td>{{item.id}}</td>
+                        <td>{{item.subject_name}}</td>
+                        <td>{{item.marks}}</td>
+                        <td>
+                            <button class="student__edit__button"><span class="student__edit material-symbols-outlined">edit</span></button>
+                            <button class="student__delete__button"><span class="student__delete material-symbols-outlined">delete</span></button>
+                        </td>
+                    </tr>
+                <!-- </tbody> -->
+              
+            <!-- </table> -->
+            
+        </div>
+        <div class="add__marks__btn">
+            <button>Calculate</button>
+            <button>Clear</button>
+        </div>
+    </div>
+</div>
+

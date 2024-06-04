@@ -4,22 +4,22 @@
     <span *ngIf="!mainservice.isMinimized" class="left__menu__name">Home</span>
    </div>
 
-   <div class="left__menu">
+   <a routerLink="/" routerLinkActive="active"  class="left__menu">
       <span class="left__menu__icon material-symbols-outlined">boy</span>
       <span *ngIf="!mainservice.isMinimized" class="left__menu__name">Student</span>
       
-      <!--  [routerLink]="'student'" -->
-   </div>
+   <!--  [routerLink]="'student'" -->
+   </a>
 
-   <div class="left__menu">
+   <a routerLink="/teacher" routerLinkActive="active"  class="left__menu">
       <span class="left__menu__icon material-symbols-outlined">supervisor_account</span>
       <span *ngIf="!mainservice.isMinimized" class="left__menu__name">Teacher</span>
-   </div>
+   </a>
 
-   <div class="left__menu">
+   <a routerLink="/examresult" class="left__menu">
       <span class="left__menu__icon material-symbols-outlined">description</span>
       <span *ngIf="!mainservice.isMinimized" class="left__menu__name">Exam Result</span>
-   </div>
+   </a>
 
    <div class="left__menu">
       <span class="left__menu__icon material-symbols-outlined">clinical_notes </span>
