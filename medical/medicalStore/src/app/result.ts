@@ -2,6 +2,7 @@ import { Marks } from "./marks";
 export interface Result {
     id:string;
     srudent_id:string;
+    term:string;
     grade:string;
     total_marks:number;
     average:number;

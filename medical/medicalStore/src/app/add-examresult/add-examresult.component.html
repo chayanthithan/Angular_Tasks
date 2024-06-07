@@ -3,14 +3,14 @@
     <div class="add__result__details">
         <div class="add__result__fields">
             <div class="add__result__input">
-                <form action="">
+                <form  action="">
                     <table>
                         <tr>
                             <td><label for="">Select Student</label><br></td>
                             <td><select id="select__student">
-                                <option value=""></option>
-                                <option value="" *ngFor="let items of this.student">{{items.first_name}} {{items.last_name}}</option>
-                            </select ></td>
+                                <option value="" *ngFor="let items of studentList">{{items.first_name}} {{items.last_name}}</option>
+                                </select >
+                            </td>
                         </tr>
                         <tr>
                             <td><label>Grade</label></td>
@@ -19,7 +19,7 @@
                         <tr>
                             <td><label for="">Term</label></td>
                             <td>
-                                <select id="term">
+                                <select  id="term">
                                     <option value=""></option>
                                     <option value="" >First Term</option>
                                     <option value="" >Second Term</option>
@@ -29,23 +29,22 @@
                         </tr>
                         <tr>
                             <td><label>Total Marks</label></td>
-                            <td><input id="totalmarks" type="text">  </td>
+                            <td><input  id="totalmarks" type="text">{{totalMarks}}</td>
                         </tr>
                         <tr>
                             <td><label>Average</label></td>
-                            <td><input id="average" type="number">  </td>
+                            <td><input id="average" type="number">100</td>
                         </tr>
                         <tr>
                             <td><label>Teacher's Opinion</label></td>
-                            <td><input id="teacherOpinion" type="text">  </td>
+                            <td><input  id="teacherOpinion" type="text">  </td>
                         </tr>
                         <tr>
                             
                             <td><label for="">Teacher Name</label></td>
                             <td>
-                                <select id="teachername">
-                                    <option value=""></option>
-                                    <option value="" *ngFor="let items of this.teacher">{{items.first_name}}{{items.last_name}}</option>
+                                <select  id="teachername">
+                                    <option value="" *ngFor="let items of teacherList">{{items.first_name}}{{items.last_name}}</option>
                                 </select >
                             </td>
                         </tr>

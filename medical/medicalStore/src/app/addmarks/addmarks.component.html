@@ -1,7 +1,7 @@
 <div class="students">
     <div class="student__list">
         <div class="marks__input">
-            <form [formGroup]="this.marksractiveForm"  action="">
+            <form [formGroup]="marksractiveForm"  action="">
             <table>
                 <tr>
                     <td><label for="">Subject</label></td>
@@ -28,7 +28,7 @@
                     </tr>
                 </thead>
                 <!-- <tbody  > -->
-                    <tr class="" *ngFor="let item of this.subjectList">
+                    <tr class="" *ngFor="let item of subjectList">
                         <td>{{item.id}}</td>
                         <td>{{item.subject_name}}</td>
                         <td>{{item.marks}}</td>
@@ -37,13 +37,18 @@
                             <button class="student__delete__button"><span class="student__delete material-symbols-outlined">delete</span></button>
                         </td>
                     </tr>
+                    <tr>
+                        <td class="" colspan="2">TotalMarks</td>
+                        <td>{{total}}</td>
+
+                    </tr>
                 <!-- </tbody> -->
               
             <!-- </table> -->
             
         </div>
         <div class="add__marks__btn">
-            <button>Calculate</button>
+            <button (click)="callTotalMethod()">Calculate</button>
             <button>Clear</button>
         </div>
     </div>
