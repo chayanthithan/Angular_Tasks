@@ -65,7 +65,10 @@
 .student__delete{
    color: red;
 }
-.student__delete__button,.student__edit__button{
+.student__result{
+    color: var(--secondaryColor);
+ }
+.student__delete__button,.student__edit__button,.student__result__button{
     margin-left: 5px;
     outline: none;
     border: none;

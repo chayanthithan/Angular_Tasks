@@ -1,5 +1,5 @@
 export interface Subjects {
-    id:string;
+    id:number;
     subject_name:string;
     marks:number;
 }

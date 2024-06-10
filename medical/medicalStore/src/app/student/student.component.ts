@@ -4,17 +4,18 @@ import { StudentService } from '../services/student.service';
 import { Student } from '../student';
 import { FormGroup } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
 import { RatingModule } from 'primeng/rating';
 import { PasswordModule } from 'primeng/password';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-student',
   standalone: true,
-  imports: [FormsModule,PasswordModule,CommonModule,ReactiveFormsModule,RouterLink,TableModule,ButtonModule,TagModule,RatingModule],
+  imports: [RouterModule,FormsModule,PasswordModule,CommonModule,ReactiveFormsModule,RouterLink,TableModule,ButtonModule,TagModule,RatingModule],
   templateUrl: './student.component.html',
   styleUrl: './student.component.css'
 })
@@ -34,7 +35,7 @@ export class StudentComponent implements OnInit{
     grade:''
 };
 value!:string;
-  constructor(private studentService:StudentService){
+  constructor(private studentService:StudentService, private router:Router){
    
   }
 
@@ -73,6 +74,10 @@ value!:string;
       }
   }
   
+  previewResult(id:string){
+    this.router.navigate(['/report-preview',id]);
+  }
+
 
   
 }

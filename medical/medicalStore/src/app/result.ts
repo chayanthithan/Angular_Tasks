@@ -1,7 +1,7 @@
 import { Marks } from "./marks";
 export interface Result {
-    id:string;
-    srudent_id:string;
+    result_id:number;
+    student_id:string;
     term:string;
     grade:string;
     total_marks:number;
@@ -11,7 +11,7 @@ export interface Result {
     attend_days:number;
     term_start_date:string;
     term_end_date:string;
-    marks:Marks[];
+    marksList:Marks[];
 
 
 }

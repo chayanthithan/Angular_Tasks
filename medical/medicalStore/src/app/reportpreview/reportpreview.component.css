@@ -1,0 +1,26 @@
+.result__div__top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.result__div__bottum{
+    display: flex;
+    margin-top: 5%;
+}
+.student__details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    /* border-left: 1px solid rgb(0, 0, 0); */
+}
+.marks__details{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    flex-direction: column;
+    width: 50%;
+    border-left: 1px solid rgb(0, 0, 0);
+}

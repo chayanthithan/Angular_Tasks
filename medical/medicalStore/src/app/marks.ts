@@ -1,8 +1,7 @@
 export interface Marks {
-    tamil:number;
-    english:number;
-    maths:number;
-    science:number;
-    history:number;
+    marks_id:string,
+    result_id:string,
+    subject_name:string,
+    marks:number,
     
 }

@@ -112,3 +112,10 @@
  .student__list__table > table{
     flex: none;
  }
+ /* input fields */
+ .input__field{
+   padding: 8px;
+   border-radius: 5px;
+   border: 1px solid var(--secondaryColor);
+   
+ }

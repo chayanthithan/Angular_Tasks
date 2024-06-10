@@ -6,6 +6,8 @@ import { AddnewTeacherComponent } from './addnew-teacher/addnew-teacher.componen
 import { ExamresultComponent } from './examresult/examresult.component';
 import { AddExamresultComponent } from './add-examresult/add-examresult.component';
 import { AddmarksComponent } from './addmarks/addmarks.component';
+import { ResultpreviewComponent } from './resultpreview/resultpreview.component';
+import { ReportpreviewComponent } from './reportpreview/reportpreview.component';
 
 export const routes: Routes = [
     {path:'',component:StudentComponent,title:'student'},
@@ -15,4 +17,6 @@ export const routes: Routes = [
     {path:'examresult',component:ExamresultComponent,title:'exam result'},
     {path:'add-examresult',component:AddExamresultComponent,title:'add exam result'},
     {path:'add-marks',component:AddmarksComponent,title:'add exam marks'},
+    {path:'preview/:id',component:ResultpreviewComponent,title:'result preview'},
+    {path:'report-preview/:id',component:ReportpreviewComponent,title:'report preview'},
 ];

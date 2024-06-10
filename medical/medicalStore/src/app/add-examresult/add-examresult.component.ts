@@ -5,16 +5,17 @@ import { Student } from '../student';
 import { CommonModule } from '@angular/common';
 import { Teacher } from '../teacher';
 import { TeacherService } from '../services/teacher.service';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { AddmarksComponent } from '../addmarks/addmarks.component';
 import { Subjects } from '../subjects';
 import { MarksService } from '../services/marks.service';
 import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Result } from '../result';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-add-examresult',
   standalone: true,
-  imports: [CommonModule,RouterLink,AddmarksComponent,FormsModule,ReactiveFormsModule],
+  imports: [CommonModule,RouterLink,AddmarksComponent,FormsModule,ReactiveFormsModule,RouterModule],
   templateUrl: './add-examresult.component.html',
   styleUrl: './add-examresult.component.css'
 })
@@ -25,7 +26,7 @@ export class AddExamresultComponent implements OnInit{
   result!:Result;
   totalMarks = 50;
   average!:number;
-  constructor(private _markservice:MarksService){}
+  constructor(private _markservice:MarksService, private router:Router){}
  
  resultservice:ResultService = inject(ResultService)
  studentservice:StudentService = inject(StudentService);
@@ -55,7 +56,11 @@ export class AddExamresultComponent implements OnInit{
       this.totalMarks = data;
       // this.examResultReactive.get('total_marks')?.setValue(this.totalMarks);
     })
+
+    
  }
- 
+ onClose(){
+  this.router.navigate(['/examresult']);
+ }
 
 }

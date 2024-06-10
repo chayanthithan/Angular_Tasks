@@ -1,14 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormGroup,FormControl, ReactiveFormsModule, FormsModule} from '@angular/forms';
+import { ResultService } from '../services/result.service';
+import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-addnew',
   standalone: true,
-  imports: [CommonModule,ReactiveFormsModule,FormsModule],
+  imports: [CommonModule,ReactiveFormsModule,FormsModule,RouterModule],
   templateUrl: './addnew.component.html',
   styleUrl: './addnew.component.css'
 })
 export class AddnewComponent implements OnInit{
+  constructor(private router:Router){}
+  __result:ResultService = inject(ResultService);
   studentReactiveForm!: FormGroup;
   student={
     id:'',
@@ -24,18 +29,14 @@ export class AddnewComponent implements OnInit{
 
 
   ngOnInit(): void {
-    this.studentReactiveForm = new FormGroup({
-      id:new FormGroup('',),
-      first_name:new FormGroup('',),
-      last_name:new FormGroup('',),
-      dob:new FormGroup('',),
-      gender:new FormGroup('',),
-      address:new FormGroup('',),
-      district:new FormGroup('',),
-      contact:new FormGroup('',),
-      grade: new FormGroup('',),
-    })
+   
   }
 
+  saveStudent(){
+    
+  }
 
+  onClose(){
+    this.router.navigate(['/']);
+  }
 }

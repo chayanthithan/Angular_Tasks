@@ -4,9 +4,6 @@
             <div class="students__list__title">
                 Student main details
             </div>
-            <div class="card flex justify-content-center">
-                <p-password [(ngModel)]="value" [toggleMask]="true" />
-            </div>
             <a routerLink="/addnew" class="student__list__options">
                 <button><span class="material-symbols-outlined">person_add</span>AddNew</button>
             </a>
@@ -41,6 +38,8 @@
                         <td>
                             <button class="student__edit__button"><span class="student__edit material-symbols-outlined">edit</span></button>
                             <button class="student__delete__button"><span class="student__delete material-symbols-outlined">delete</span></button>
+                            <button (click)="previewResult(item.id)" class="student__result__button"><span class="student__result material-symbols-outlined">contact_page</span></button>
+                            
                         </td>
                     </tr>
                 </tbody>

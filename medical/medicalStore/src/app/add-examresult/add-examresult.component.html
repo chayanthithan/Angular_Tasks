@@ -7,19 +7,19 @@
                     <table>
                         <tr>
                             <td><label for="">Select Student</label><br></td>
-                            <td><select id="select__student">
+                            <td><select id="select__student" [(ngModel)]="resultservice.resultObj.student_id" [ngModelOptions]="{standalone: true}">
                                 <option value="" *ngFor="let items of studentList">{{items.first_name}} {{items.last_name}}</option>
                                 </select >
                             </td>
                         </tr>
                         <tr>
                             <td><label>Grade</label></td>
-                            <td><input id="grade" type="text">  </td>
+                            <td><input id="grade" type="text" [(ngModel)]="resultservice.resultObj.grade" [ngModelOptions]="{standalone: true}">  </td>
                         </tr>
                         <tr>
                             <td><label for="">Term</label></td>
                             <td>
-                                <select  id="term">
+                                <select  id="term" [(ngModel)]="resultservice.resultObj.term" [ngModelOptions]="{standalone: true}">
                                     <option value=""></option>
                                     <option value="" >First Term</option>
                                     <option value="" >Second Term</option>
@@ -29,36 +29,36 @@
                         </tr>
                         <tr>
                             <td><label>Total Marks</label></td>
-                            <td><input  id="totalmarks" type="text">{{totalMarks}}</td>
+                            <td><input  id="totalmarks" type="text" [(ngModel)]="resultservice.resultObj.total_marks" [ngModelOptions]="{standalone: true}"></td>
                         </tr>
                         <tr>
                             <td><label>Average</label></td>
-                            <td><input id="average" type="number">100</td>
+                            <td><input id="average" type="number" [(ngModel)]="resultservice.resultObj.average" [ngModelOptions]="{standalone: true}"></td>
                         </tr>
                         <tr>
                             <td><label>Teacher's Opinion</label></td>
-                            <td><input  id="teacherOpinion" type="text">  </td>
+                            <td><input  id="teacherOpinion" type="text" [(ngModel)]="resultservice.resultObj.teacher_opinion" [ngModelOptions]="{standalone: true}">  </td>
                         </tr>
                         <tr>
                             
                             <td><label for="">Teacher Name</label></td>
                             <td>
                                 <select  id="teachername">
-                                    <option value="" *ngFor="let items of teacherList">{{items.first_name}}{{items.last_name}}</option>
+                                    <option value="" *ngFor="let items of teacherList" [(ngModel)]="resultservice.resultObj.teacher_id" [ngModelOptions]="{standalone: true}">{{items.first_name}}{{items.last_name}}</option>
                                 </select >
                             </td>
                         </tr>
                         <tr>
                             <td><label>Attend Days</label></td>
-                            <td><input id="attenddays" type="number">  </td>
+                            <td><input id="attenddays" type="number" [(ngModel)]="resultservice.resultObj.attend_days" [ngModelOptions]="{standalone: true}">  </td>
                         </tr>
                         <tr>
                             <td><label>Term Start Date</label></td>
-                            <td><input id="tsd" type="date">  </td>
+                            <td><input id="tsd" type="date" [(ngModel)]="resultservice.resultObj.term_start_date" [ngModelOptions]="{standalone: true}">  </td>
                         </tr>
                         <tr>
                             <td><label>Term End Date</label></td>
-                            <td><input id="ted" type="date">  </td>
+                            <td><input id="ted" type="date" [(ngModel)]="resultservice.resultObj.term_end_date" [ngModelOptions]="{standalone: true}">  </td>
                         </tr>
                     </table>
                 </form>
@@ -66,7 +66,7 @@
             <div class="add__result__btn">
                 <button (click)="resultservice.addResult()">save</button>
                 <button>clear</button>
-                <button>close</button>
+                <button (click)="onClose()">close</button>
             </div>
         </div>
         <div class="add__marks__fields">

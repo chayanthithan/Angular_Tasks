@@ -17,7 +17,7 @@ export class MarksService{
      
    }
   student:Subjects={
-    id:'',
+    id:0,
     subject_name:'',
     marks:0
   }
