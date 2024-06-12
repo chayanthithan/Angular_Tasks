@@ -40,13 +40,16 @@
    align-items: center;
    margin: auto;
    padding-top: 10px;
-   background-color: rgb(180, 228, 229);
+   background-color: rgba(255, 255, 255,0.9);
+   width: 100%;
+   border: 1px solid var(--secondaryColor);
+   border-radius: 10px;
 }
 
 .student__table__thead__tr > th{
     padding: 5px 10px;
     margin-top: 10px;
-    font-size: large;
+    font-size: medium;
     text-align: center;
     /* border: 1px solid yellow; */
 }

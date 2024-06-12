@@ -1,5 +1,5 @@
 .header{
-    background-color: var(--primaryColor);
+    background-color:white;
     height: 10vh;
     position:sticky;
     display: flex;
@@ -34,4 +34,35 @@
 .header__right input{
     /* padding: 5px 20px; */
 }
+
+/* nav list */
+.header__style{
+    display: flex;
+    align-items: center;
+   
+}
+.header__nav__list > ul{
+    text-decoration: none;
+    display: flex;
+}
+.header__nav__list > ul > li{
+    list-style: none;
+}
+.header__nav__list > ul > li > a{
+    text-decoration: none;
+    color: var(--primaryColor);
+    padding:10px;
+    cursor: pointer;
+    border-radius:3px;
+}
+.header__nav__list > ul > li > a:hover{
+    background-color:rgba(23, 107, 135,0.1);
+    border-bottom: 3px solid var(--primaryColor);
+    
+}
+
+/* .header-menu__item--active{
+    color: var(--primaryColor);
+    background-color: var(--primaryColor);
+} */
 

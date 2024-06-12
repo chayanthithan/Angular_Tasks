@@ -40,8 +40,10 @@
    align-items: center;
    margin: auto;
    padding-top: 10px;
-   background-color: rgb(180, 228, 229);
+   background-color: rgba(255, 255, 255,0.9);
    width: 100%;
+   /* border: 1px solid var(--secondaryColor); */
+   border-radius: 10px;
 }
 
 .student__table__thead__tr > th{
@@ -73,6 +75,7 @@
     outline: none;
     border: none;
     background-color: transparent;
+    cursor: pointer;
 }
 .student__edit__button:hover{
     background-color:rgb(7, 129, 74);
@@ -170,5 +173,6 @@ form > table{
     margin-top: 20px;
     cursor: pointer;
  }
- 
- 
+
+ /* dropdown */
+ /* Style the dropdown container */

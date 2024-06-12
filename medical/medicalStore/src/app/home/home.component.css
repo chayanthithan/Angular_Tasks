@@ -1,22 +1,16 @@
 .home{
     /* background-color: var(--home); */
-    display: flex;
-    /* align-items: center; */
-    justify-content: flex-start;
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-top: 3%;
+    padding-left: 5%;
+    padding-right:5%;
+    padding-top:3%;
     
 }
-.home__left{
+/* .home__left{
     width: 12%;
 }
 .left__mini{
     width: 5%;
-}
-.home__right{
+} */
+/* .home__right{
     width: 88%;
-}
-.right__mini{
-    width: 95%;
-}
+} */

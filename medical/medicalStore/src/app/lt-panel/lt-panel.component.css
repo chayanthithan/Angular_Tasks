@@ -23,10 +23,10 @@
 }
 .left__menu__icon{
     font-size:30px;
-    padding-left: 10%;
+    /* padding-left: 10%; */
 }
 .left__menu__name{
     font-size: 18px;
     font-weight: lighter;
-    padding-left: 2%;
+    /* padding-left: 2%; */
 }

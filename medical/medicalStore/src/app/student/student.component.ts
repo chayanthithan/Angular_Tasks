@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit ,inject} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StudentService } from '../services/student.service';
 import { Student } from '../student';
@@ -12,6 +12,7 @@ import { RatingModule } from 'primeng/rating';
 import { PasswordModule } from 'primeng/password';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { MainServiceService } from '../main-service.service';
 @Component({
   selector: 'app-student',
   standalone: true,
@@ -19,7 +20,8 @@ import { RouterModule } from '@angular/router';
   templateUrl: './student.component.html',
   styleUrl: './student.component.css'
 })
-export class StudentComponent implements OnInit{
+export class StudentComponent{
+  __main:MainServiceService = inject(MainServiceService);
   studentObj:Student[]=[];
   isAddNewStudent:boolean = false;
   studentReactiveForm!: FormGroup;
@@ -35,11 +37,14 @@ export class StudentComponent implements OnInit{
     grade:''
 };
 value!:string;
+
   constructor(private studentService:StudentService, private router:Router){
    
   }
 
   ngOnInit(): void {
+    this.__main.resetMenu();
+    document.getElementById('h__student')?.classList.add(...['menu__select']);
     this.studentReactiveForm = new FormGroup({
       id:new FormGroup('',),
       first_name:new FormGroup('',),
@@ -78,6 +83,14 @@ value!:string;
     this.router.navigate(['/report-preview',id]);
   }
 
+// dropdown
+isDropdownVisible = false;
+// itemId = 'someItemId';  // Replace with the actual ID you want to use
 
-  
+toggleDropdown() {
+  this.isDropdownVisible = !this.isDropdownVisible;
+}
+
+
+
 }

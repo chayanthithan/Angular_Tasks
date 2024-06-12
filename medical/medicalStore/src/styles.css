@@ -12,12 +12,12 @@ body{
 }
 :root{
     --primaryColor:#053B50;
-    --secondaryColor:#176B87;
-    --textColor:#64CCC5; 
+    --secondaryColor:rgb(23, 107, 135);
+    --textColor:rgb(100, 204, 197); 
     --home:#dbe1e1;
 }
 .icon__color{
-    color: white;
+    color: #053B50;
     cursor: pointer;
 }
 .make__center{
@@ -28,3 +28,106 @@ body{
 .icon__size{
     font-size: 30px;
 }
+/* menu */
+.menu__select{
+    background-color:rgba(23, 107, 135,0.1);
+    border-bottom: 3px solid var(--primaryColor);
+}
+
+/* searchbar */
+
+.student__searchbar{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(209, 229, 228);
+    background-color: rgba(255, 255, 255,0.7);
+    border-radius:5px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+ }
+ .student__Search-and-input{
+    display: flex;
+    border: 1px solid var(--secondaryColor);
+    width: 95%;
+    padding: 10px;
+    background-color: white;
+    border-radius:5px;
+ }
+ .student__Search-and-input > input{
+    width: 100%;
+    border: none;
+    outline: none;
+ }
+
+ .stuent__star{
+    border: 1px solid var(--secondaryColor);
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius:5px;
+    margin-left: 1%;
+    
+ }
+.stuent__star span{
+    color: var(--primaryColor);
+ }
+
+ /* Actions */
+ .dropdown{
+    position: relative;
+ }
+ .dropdown button{
+    outline: none;
+    border: none;
+    background-color: transparent;
+ }
+ .span__more_vert{
+    cursor: pointer;
+    /* background-color: rgba(201, 201, 201, 0.9); */
+    border-radius: 50%;
+    padding: 5px;
+ }
+ .span__more_vert:hover{
+    background-color: rgba(214, 214, 214, 0.9);
+ }
+ .dropdown-content__block{
+    position: absolute;
+    background-color: rgba(200, 234, 239, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    display: block;
+    top: 0px;
+    left: 30px;
+ }
+ .dropdown-content__hidden{
+    position: absolute;
+    background-color: rgba(200, 234, 239, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    display: none;
+ }
+ .dropdown-content button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color:var(--secondaryColor);
+ }
+ .dropdown-content > button > span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color:var(--secondaryColor);
+    padding:5px;
+    
+ }
+ .dropdown-content > button:hover{
+    background-color:white;
+    border-radius: 5px;
+ }

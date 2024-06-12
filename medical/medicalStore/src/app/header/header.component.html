@@ -1,8 +1,22 @@
 <div class="header">
-    <div class="header__left">
-        <span *ngIf="mainService.isMinimized" class="material-symbols-outlined icon__color icon__size" (click)="mainService.toggle()">menu</span>
-        <span *ngIf="!mainService.isMinimized" class="material-symbols-outlined icon__color icon__size" (click)="mainService.toggle()"> menu_open</span>
-        <img class="header__medi__logo " src="../../assets/medi_logo.png" alt="medi_logo">
+    <div class="header__style">
+        <div class="header__left">
+            <!-- <span *ngIf="mainService.isMinimized" class="material-symbols-outlined icon__color icon__size" (click)="mainService.toggle()">menu</span>
+            <span *ngIf="!mainService.isMinimized" class="material-symbols-outlined icon__color icon__size" (click)="mainService.toggle()"> menu_open</span> -->
+            <img class="header__medi__logo " src="../../assets/medi_logo.png" alt="medi_logo">
+
+        </div>
+        <nav class="header__nav__list">
+            <ul>
+                <li><a id="h__home"  >Home</a></li>
+                <li><a id="h__student" routerLink="/" routerLinkActive="active">Student</a></li>
+                <li><a id="h__teacher" routerLink="/teacher" routerLinkActive="active">Teacher</a></li>
+                <li><a id="h__examresult" routerLink="/examresult">Exam Result</a></li>
+                <li><a id="h__attendance" href="#">Attendance</a></li>
+                <li><a id="h__report" routerLink="/preview/:id">Report</a></li>
+            </ul>
+        </nav>
+        
     </div>
     <div class="header__right">
         <div class="make__center" >
@@ -10,8 +24,6 @@
             <span class="material-symbols-outlined icon__color icon__size"> search</span>
         </div>
         <div>
-
-            
         </div>
         <span class="material-symbols-outlined icon__color icon__size">circle_notifications </span>
         <span class="material-symbols-outlined icon__color icon__size">account_circle</span>

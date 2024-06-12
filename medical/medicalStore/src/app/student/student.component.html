@@ -1,4 +1,4 @@
-<div class="students">
+<div class="students ">
     <div class="student__list">
         <div class="students__list__header">
             <div class="students__list__title">
@@ -7,6 +7,15 @@
             <a routerLink="/addnew" class="student__list__options">
                 <button><span class="material-symbols-outlined">person_add</span>AddNew</button>
             </a>
+        </div>
+        <div class="student__searchbar">
+            <div class="student__Search-and-input">
+                <span class="material-symbols-outlined icon__color">search</span>
+                <input type="text">
+            </div>
+            <div class="stuent__star">
+                <span class="material-symbols-outlined icon__color">kid_star</span>
+            </div>
         </div>
         <div class="student__list__table">
             <table>
@@ -36,10 +45,14 @@
                         <td>{{item.contact}}</td>
                         <td>{{item.grade}}</td>
                         <td>
-                            <button class="student__edit__button"><span class="student__edit material-symbols-outlined">edit</span></button>
-                            <button class="student__delete__button"><span class="student__delete material-symbols-outlined">delete</span></button>
-                            <button (click)="previewResult(item.id)" class="student__result__button"><span class="student__result material-symbols-outlined">contact_page</span></button>
-                            
+                            <div class="dropdown">
+                                <button (click)="__main.triggerAction()"><span  class="span__more_vert material-symbols-outlined">more_vert</span></button>
+                                <div [ngClass]="__main.isAction?'dropdown-content__block dropdown-content':'dropdown-content__hidden dropdown-content'">
+                                  <button class=""><span class="material-symbols-outlined">edit</span>Edit</button>
+                                  <button class=""><span class="material-symbols-outlined">delete</span>Delete</button>
+                                  <button class="" ><span class="material-symbols-outlined">contact_page</span>Exam Result</button>
+                                </div>
+                              </div>
                         </td>
                     </tr>
                 </tbody>
