@@ -1,0 +1,29 @@
+.student__list{
+    display: flex;
+    align-items: center;
+}
+.student__records{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+.student__img{
+    width: 20%;
+    /* border: 1px solid black; */
+}
+.student__img img{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.student__left__col{
+    width: 80%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-around;
+}
+.student__left__col td{
+  width: 33%;
+  /* border: 1px solid red; */
+}

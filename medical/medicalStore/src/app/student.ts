@@ -8,4 +8,5 @@ export interface Student {
     district:string;
     contact:string;
     grade:string;
+    link:string;
 }

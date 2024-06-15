@@ -1,0 +1,48 @@
+<div class="student__list">
+    <div class="student__records">
+        <div class="student__img">
+            <img src="../../assets/student.jpg" alt="">
+        </div>
+       <div class="student__left__col">
+        <td>{{this.firstName}}{{' '}}{{this.lastName}}</td>
+        <td>{{grade}}</td>
+        <td>{{contactNo}}</td>
+       </div>
+      
+    </div>
+    <div class="student__actions">
+        <app-actions></app-actions>
+    </div>
+</div>
+<!-- <div class="student__list__table">
+    <table class="table">
+         <thead  class="student__table__thead">
+            <tr class="student__table__thead__tr">
+                <th>Id</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>DOB</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>District</th>
+                <th>Contact</th>
+                <th>Grade</th>
+                <th>Actions</th>
+            </tr>
+        </thead> 
+        <tbody class="student__table__tbody" >
+            <tr class="student__table__tbody__tr" *ngFor="let item of __student.student">
+                
+                <td>{{item.id}}</td>
+                <td (click)="__student.setSelectedStudent(item)" >{{item.first_name}}</td>
+                <td>{{item.last_name}}</td>
+                <td>{{item.contact}}</td>
+                <td>{{item.grade}}</td>
+                <td> 
+                    <app-actions></app-actions>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+ -->

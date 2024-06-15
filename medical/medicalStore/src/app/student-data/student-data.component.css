@@ -1,0 +1,71 @@
+.student__container{
+    height: 100vh;
+    width: 100vw;
+    background-color: #00000095;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    /* z-index: 100; */
+}
+.student__popup{
+    height: 400px;
+    width: 50%;
+    background-color: rgba(255, 255, 255);
+    /* margin-top: 50px; */
+    border-radius: 10px;
+    border: 1px solid rgba(5, 129, 120, 0.2);
+
+}
+.student__popup__close{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    /* border: 1px solid black; */
+}
+.student__popup__close span{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding: 10px;
+}
+.student__popup__close span:hover{
+    background-color: rgba(5, 129, 120, 0.2);
+    border-radius: 50%;
+    
+}
+.student__popup__records{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.student__popup__img{
+    width: 30%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.student__popup__img img{
+    height: 150px;
+    width: 150px;
+}
+.student__popup__details{
+    width: 70%;
+    /* border: 1px solid black; */
+    text-transform: capitalize;
+    color: rgba(16, 95, 90, 0.9);
+}
+.student__popup__details table tr{
+    padding: 10px;
+}
+.student__popup__details > table > tr > td:nth-child(2){
+    margin-left: 10px;
+
+}

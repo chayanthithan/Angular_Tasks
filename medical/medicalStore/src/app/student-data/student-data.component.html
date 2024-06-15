@@ -1,0 +1,49 @@
+
+<div class="student__container">
+    <div class="student__popup">
+        <div class="student__popup__close">
+            <span (click)="onClose()" class="material-symbols-outlined">close_small</span>
+        </div>
+        <div class="student__popup__records">
+            <div class="student__popup__img">
+                <img src="../../assets/student3__img.png" alt="">
+            </div>
+            <div class="student__popup__details">
+                <table>
+                    <tr>
+                        <td>Id :</td>
+                        <td>{{__student.selectedStudent.id}}</td>
+                    </tr>
+                    <tr>
+                        <td>first name :</td>
+                        <td>{{__student.selectedStudent.first_name}}</td>
+                    </tr>
+                    <tr>
+                        <td>last name :</td>
+                        <td>{{__student.selectedStudent.last_name}}</td>
+                    </tr>
+                    <tr>
+                        <td>Grade :</td>
+                        <td>{{__student.selectedStudent.grade}}</td>
+                    </tr>
+                    <tr>
+                        <td>Address :</td>
+                        <td>{{__student.selectedStudent.address}}</td>
+                    </tr>
+                    <tr>
+                        <td>District</td>
+                        <td>{{__student.selectedStudent.district}}</td>
+                    </tr>
+                    <tr>
+                        <td>contact no :</td>
+                        <td>{{__student.selectedStudent.contact}}</td>
+                    </tr>
+                    <tr>
+                        <td>DOB</td>
+                        <td>{{__student.selectedStudent.dob}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

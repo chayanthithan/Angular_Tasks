@@ -8,6 +8,8 @@
 }
 .students__list__title{
     font-size: large;
+    display: flex;
+    align-items: center;
 }
 .student__list__options button{
     padding: 8px 15px;

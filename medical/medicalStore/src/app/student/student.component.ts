@@ -13,15 +13,18 @@ import { PasswordModule } from 'primeng/password';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MainServiceService } from '../main-service.service';
+import { StudentPreviewComponent } from '../student-preview/student-preview.component';
+import { ActionsComponent } from '../actions/actions.component';
 @Component({
   selector: 'app-student',
   standalone: true,
-  imports: [RouterModule,FormsModule,PasswordModule,CommonModule,ReactiveFormsModule,RouterLink,TableModule,ButtonModule,TagModule,RatingModule],
+  imports: [ActionsComponent,StudentPreviewComponent,RouterModule,FormsModule,PasswordModule,CommonModule,ReactiveFormsModule,RouterLink,TableModule,ButtonModule,TagModule,RatingModule],
   templateUrl: './student.component.html',
   styleUrl: './student.component.css'
 })
 export class StudentComponent{
   __main:MainServiceService = inject(MainServiceService);
+  __student:StudentService = inject(StudentService)
   studentObj:Student[]=[];
   isAddNewStudent:boolean = false;
   studentReactiveForm!: FormGroup;
@@ -34,7 +37,8 @@ export class StudentComponent{
     address:'',
     district:'',
     contact:'',
-    grade:''
+    grade:'',
+    link:''
 };
 value!:string;
 
