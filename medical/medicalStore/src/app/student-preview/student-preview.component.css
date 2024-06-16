@@ -9,12 +9,12 @@
     cursor: pointer;
 }
 .student__img{
-    width: 20%;
+    width: 5%;
     /* border: 1px solid black; */
 }
 .student__img img{
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
   border-radius: 50%;
 }
 .student__left__col{

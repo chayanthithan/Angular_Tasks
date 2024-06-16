@@ -18,10 +18,30 @@
                 <span class="material-symbols-outlined icon__color">kid_star</span>
             </div>
         </div>
-        <div *ngFor="let stuObj of __student.student">
-            <app-student-preview (click)="__student. setSelectedStudent(stuObj)"  [firstName]="stuObj.first_name" [lastName]="stuObj.last_name" [grade]="stuObj.grade" [contactNo]="stuObj.contact"></app-student-preview>
-            
+        <div class="student__details">
+            <table class="student__details__table">
+                <thead>
+                    <tr>
+                        <th>FullName</th>
+                        <th>Grade</th>
+                        <th>ContactNo</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let stuObj of __student.student">
+                        <td colspan="4">
+                            <app-student-preview (click)="__student. setSelectedStudent(stuObj)"  [firstName]="stuObj.first_name" [lastName]="stuObj.last_name" [grade]="stuObj.grade" [contactNo]="stuObj.contact"></app-student-preview>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
+        <!-- <div class="student__list__table"> -->
+            <!-- <div *ngFor="let stuObj of __student.student" >
+                <app-student-preview (click)="__student. setSelectedStudent(stuObj)"  [firstName]="stuObj.first_name" [lastName]="stuObj.last_name" [grade]="stuObj.grade" [contactNo]="stuObj.contact"></app-student-preview>
+            </div> -->
+        <!-- </div> -->
     </div>
     <!-- <div>
         <p-table  [tableStyle]="{'min-width': '60rem'}">
@@ -118,6 +138,6 @@
 
 </div>
 
-<div class="add__image">
+<!-- <div class="add__image">
     <img src="../../assets/student4__img.png" alt="">
-</div>
+</div> -->
