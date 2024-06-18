@@ -33,7 +33,13 @@
                         <td colspan="4">
                             <app-student-preview (click)="__student. setSelectedStudent(stuObj)"  [firstName]="stuObj.first_name" [lastName]="stuObj.last_name" [grade]="stuObj.grade" [contactNo]="stuObj.contact"></app-student-preview>
                         </td>
+                        <td>
+                            <div class="student__actions">
+                                <app-actions></app-actions>
+                            </div>
+                        </td>
                     </tr>
+                    
                 </tbody>
             </table>
         </div>

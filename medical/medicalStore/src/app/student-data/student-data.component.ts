@@ -14,8 +14,15 @@ import { Student } from '../student';
 export class StudentDataComponent {
   __main:MainServiceService = inject(MainServiceService);
   __student:StudentService = inject(StudentService);
-
+  
+ngOnInit(){
+  this. getUrl();
+}
   onClose(){
     this.__student.selectedStudent = {} as Student;
+  }
+  getUrl(){
+    let url = this.__main.currentUrl;
+    console.log("url",url);
   }
 }

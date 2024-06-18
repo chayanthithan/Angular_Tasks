@@ -16,12 +16,14 @@
   height: 30px;
   width: 30px;
   border-radius: 50%;
+  margin-left: 25px;
 }
 .student__left__col{
     width: 80%;
     /* border: 1px solid black; */
     display: flex;
     justify-content: space-around;
+    margin-left: 25px;
 }
 .student__left__col td{
   width: 33%;

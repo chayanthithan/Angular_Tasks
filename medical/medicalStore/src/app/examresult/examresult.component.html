@@ -24,19 +24,23 @@
                 <thead class="student__table__thead">
                     <tr class="student__table__thead__tr">
                         <th>Id</th>
-                        <th>Student Name</th>
+                        <th>Student Id</th>
+                        <th>Teacher Name</th>
                         <th>Grade</th>
                         <th>Term</th>
-                        <th>Total Marks</th>
-                        <th>Average</th>
-                        <th>Teacher's Option</th>
-                        <th>Teacher Name</th>
-                        <th>Attend Days</th>
-                        <th>TSD</th>
-                        <th>TED</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
+                <tbody>
+                    <tr *ngFor="let resultObj of __result.resultList">
+                        <td (click)="__result.setResultObj(resultObj)">{{resultObj.result_id}}</td>
+                        <td>{{resultObj.student_id}}</td>
+                        <td>{{resultObj.teacher_id}}</td>
+                        <td>{{resultObj.grade}}</td>
+                        <td>{{resultObj.term}}</td>
+                        <td><app-actions></app-actions></td>
+                    </tr>
+                </tbody>
                 <!-- <tbody class="student__table__tbody" *ngFor="let item of teacherObj">
                     <tr>
                         <td>{{item.id}}</td>

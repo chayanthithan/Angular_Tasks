@@ -1,14 +1,25 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { Result } from '../result';
 import { Marks } from '../marks';
 import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
-export class ResultService {
+export class ResultService implements OnInit{
   resultList:Result[] = [] as Result[];
+  setResultStudent:Result = {} as Result;
+
   constructor(private router:Router) { }
-  
+  ngOnInit(){
+    this.insertObject();
+  }
+  //store result obj
+  setResultObj(obj:Result | null){
+    this.setResultStudent = obj as Result;
+  }
+  cancelResultSheetPopup(){
+    this.setResultStudent = {} as Result;
+  }
   resultObj:Result={
     result_id:0,
     student_id:'',
@@ -28,6 +39,12 @@ export class ResultService {
   isAddNew:boolean = false;
 
   resultId=0;
+
+  insertObject(){
+    this.resultObjList.forEach(obj=>{
+      this.resultList.push(obj);
+    })
+  }
 
   addResult(){
     if(this.editFlag == false){
@@ -103,5 +120,147 @@ export class ResultService {
   openPreview(id:number){
     this.router.navigate(['/preview',id]);
   }
+
+  resultObjList=[
+    {    
+      result_id:1,
+      student_id:'1',
+      term:'first',
+      grade:'10',
+      total_marks:900,
+      average:90,
+      teacher_opinion:'fsdfkjs',
+      teacher_id:1,
+      attend_days:10,
+      term_start_date:'2024-06-17',
+      term_end_date:'2024-06-17',
+      marksList:[],
+    },
+    {    
+      result_id:1,
+      student_id:'02',
+      term:'fourth',
+      grade:'10',
+      total_marks:900,
+      average:90,
+      teacher_opinion:'fsdfkjs',
+      teacher_id:1,
+      attend_days:10,
+      term_start_date:'2024-06-17',
+      term_end_date:'2024-06-17',
+      marksList:[]
+    },
+    {    
+      result_id:3,
+      student_id:'03',
+      term:'first',
+      grade:'10',
+      total_marks:900,
+      average:90,
+      teacher_opinion:'fsdfkjs',
+      teacher_id:1,
+      attend_days:10,
+      term_start_date:'2024-06-17',
+      term_end_date:'2024-06-17',
+      marksList:[]
+    },{    
+      result_id:4,
+      student_id:'04',
+      term:'second',
+      grade:'10',
+      total_marks:900,
+      average:90,
+      teacher_opinion:'fsdfkjs',
+      teacher_id:1,
+      attend_days:10,
+      term_start_date:'2024-06-17',
+      term_end_date:'2024-06-17',
+      marksList:[]
+    },
+    {    
+      result_id:5,
+      student_id:'05',
+      term:'third',
+      grade:'10',
+      total_marks:900,
+      average:90,
+      teacher_opinion:'fsdfkjs',
+      teacher_id:1,
+      attend_days:10,
+      term_start_date:'2024-06-17',
+      term_end_date:'2024-06-17',
+      marksList:[]
+    },
+    {    
+      result_id:6,
+      student_id:'06',
+      term:'first',
+      grade:'10',
+      total_marks:900,
+      average:90,
+      teacher_opinion:'fsdfkjs',
+      teacher_id:1,
+      attend_days:10,
+      term_start_date:'2024-06-17',
+      term_end_date:'2024-06-17',
+      marksList:[]
+    },{    
+      result_id:7,
+      student_id:'7',
+      term:'fiveth',
+      grade:'10',
+      total_marks:900,
+      average:90,
+      teacher_opinion:'fsdfkjs',
+      teacher_id:1,
+      attend_days:10,
+      term_start_date:'2024-06-17',
+      term_end_date:'2024-06-17',
+      marksList:[]
+    },
+    {    
+      result_id:8,
+      student_id:'8',
+      term:'first',
+      grade:'10',
+      total_marks:900,
+      average:90,
+      teacher_opinion:'fsdfkjs',
+      teacher_id:1,
+      attend_days:10,
+      term_start_date:'2024-06-17',
+      term_end_date:'2024-06-17',
+      marksList:[]
+    },
+    {    
+      result_id:9,
+      student_id:'09',
+      term:'second',
+      grade:'10',
+      total_marks:900,
+      average:90,
+      teacher_opinion:'fsdfkjs',
+      teacher_id:1,
+      attend_days:10,
+      term_start_date:'2024-06-17',
+      term_end_date:'2024-06-17',
+      marksList:[]
+    },
+    {    
+      result_id:10,
+      student_id:'10',
+      term:'first',
+      grade:'10',
+      total_marks:900,
+      average:90,
+      teacher_opinion:'fsdfkjs',
+      teacher_id:1,
+      attend_days:10,
+      term_start_date:'2024-06-17',
+      term_end_date:'2024-06-17',
+      marksList:[]
+    }
+  ]
+ 
   
 }

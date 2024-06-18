@@ -1,0 +1,79 @@
+.student__result{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.503);
+    padding-bottom: 10%;
+    position: absolute;
+    top: 0;
+}
+.student__result__centent{
+    height: 100vh;
+    width: 50vw;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: auto;
+    border-radius: 5px;
+    padding: 10px 30px;
+}
+.student__result__border{
+    border: 1px solid rgb(53, 52, 52);
+    
+
+}
+.student__img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.student__img img{
+    height: 150px;
+    width: 150px;
+}
+.student__info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2%;
+}
+.student__info table tbody tr td{
+    padding: 5px;
+}
+.student__marks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1%;
+}
+.student__marks__name{
+    margin-right: 30%;
+    padding: 10px;
+}
+.student__marks table{
+    border: 1px solid;
+    width: 80%;
+}
+.student__marks table tr td{
+    border: 1px solid;
+    padding: 5px 30px;
+}
+.result__actions{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 28%;
+}
+.result__actions button{
+    padding: 5px 20px;
+    outline: none;
+    /* border: 1px solid; */
+    margin: 20px 2px;
+    /* background-color: var(--secondaryColor); */
+    border: 1px solid rgb(188, 188, 188);
+}
+.result__actions button:hover{
+    
+    /* background-color: var(--secondaryColor); */
+    background-color:rgb(255, 255, 255);
+}

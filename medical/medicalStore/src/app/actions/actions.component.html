@@ -1,6 +1,6 @@
 <div class="dropdown">
-    <button (click)="__main.triggerAction()"><span  class="span__more_vert material-symbols-outlined">more_vert</span></button>
-    <div [ngClass]="__main.isAction?'dropdown-content__block dropdown-content':'dropdown-content__hidden dropdown-content'">
+    <button (click)="triggerAction()" (focusout)="triggerAction()"><span  class="span__more_vert material-symbols-outlined">more_vert</span></button>
+    <div [ngClass]="isAction?'dropdown-content__block dropdown-content':'dropdown-content__hidden dropdown-content'">
       <button class=""><span class="material-symbols-outlined">edit</span>Edit</button>
       <button class=""><span class="material-symbols-outlined">delete</span>Delete</button>
       <button class="" ><span class="material-symbols-outlined">contact_page</span>Exam Result</button>

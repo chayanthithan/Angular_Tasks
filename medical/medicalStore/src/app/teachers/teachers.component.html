@@ -22,13 +22,13 @@
             <table>
                 <thead class="student__table__thead">
                     <tr class="student__table__thead__tr">
-                        <th>id</th>
+                        <!-- <th>id</th> -->
                         <th>firstname</th>
                         <th>lastname</th>
-                        <th>DOB</th>
-                        <th>gender</th>
-                        <th>address</th>
-                        <th>district</th>
+                        <!-- <th>DOB</th> -->
+                        <!-- <th>gender</th> -->
+                        <!-- <th>address</th> -->
+                        <!-- <th>district</th> -->
                         <th>contact</th>
                         <th>grade</th>
                         <th>Actions</th>
@@ -36,18 +36,18 @@
                 </thead>
                 <tbody class="student__table__tbody" *ngFor="let item of teacherObj">
                     <tr>
-                        <td>{{item.id}}</td>
-                        <td>{{item.first_name}}</td>
+                        <!-- <td>{{item.id}}</td> -->
+                        <td (click)="__student. setSelectedStudent(item)">{{item.first_name}}</td>
                         <td>{{item.last_name}}</td>
-                        <td>{{item.dob}}</td>
-                        <td>{{item.gender}}</td>
-                        <td>{{item.address}}</td>
-                        <td>{{item.district}}</td>
+                        <!-- <td>{{item.dob}}</td> -->
+                        <!-- <td>{{item.gender}}</td> -->
+                        <!-- <td>{{item.address}}</td> -->
+                        <!-- <td>{{item.district}}</td> -->
                         <td>{{item.contact}}</td>
                         <td>{{item.grade}}</td>
                         <td>
                             <div class="dropdown">
-                                <button (click)="__main.triggerAction()"><span  class="span__more_vert material-symbols-outlined">more_vert</span></button>
+                                <button><span  class="span__more_vert material-symbols-outlined">more_vert</span></button>
                                 <div [ngClass]="__main.isAction?'dropdown-content__block dropdown-content':'dropdown-content__hidden dropdown-content'">
                                   <button class=""><span class="material-symbols-outlined">edit</span>Edit</button>
                                   <button class=""><span class="material-symbols-outlined">delete</span>Delete</button>

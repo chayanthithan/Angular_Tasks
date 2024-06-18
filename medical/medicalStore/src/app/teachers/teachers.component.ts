@@ -5,6 +5,7 @@ import { TeacherService } from '../services/teacher.service';
 import { RouterLink } from '@angular/router';
 import { TableModule } from 'primeng/table';
 import { MainServiceService } from '../main-service.service';
+import { StudentService } from '../services/student.service';
 @Component({
   selector: 'app-teachers',
   standalone: true,
@@ -15,7 +16,7 @@ import { MainServiceService } from '../main-service.service';
 export class TeachersComponent{
   
   __main:MainServiceService = inject(MainServiceService);
-
+  __student:StudentService = inject(StudentService);
   teacherObj:Teacher[]=[];
   isAddNewTeacher:boolean = false;
 

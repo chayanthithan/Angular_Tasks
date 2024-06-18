@@ -44,7 +44,14 @@
    width: 100%;
    border: 1px solid var(--secondaryColor);
    border-radius: 10px;
+   overflow-y: scroll;
+    height: 300px;
 }
+.student__list__table table{
+    padding-top: 40px;
+    cursor: pointer;
+}
+
 
 .student__table__thead__tr > th{
     padding: 5px 10px;
@@ -60,6 +67,7 @@
 .student__table__tbody__tr > td{
     /* border: 1px solid black; */
     padding: 5px 15px;
+    cursor: pointer;
 }
 .student__delete{
    color: red;

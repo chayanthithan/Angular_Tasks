@@ -1,11 +1,23 @@
-import { Injectable } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
+import { Inject, Injectable } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MainServiceService {
+  previousUrl: string = '';
+  currentUrl: string = '';
 
-  constructor() { }
+  constructor(@Inject(DOCUMENT) private document: HTMLDocument,private router:Router) { 
+    this.router.events.subscribe(event=>{
+      if(event instanceof NavigationEnd){
+        this.previousUrl = this.currentUrl;
+        this.currentUrl = event.urlAfterRedirects;
+      }
+    })
+  }
 
   isMinimized:boolean=true;
   isAction:boolean = false;
@@ -21,8 +33,5 @@ export class MainServiceService {
     document.getElementById('h__home')?.classList.remove(...['menu__select']);
   }
   //this is the method for do action
-  triggerAction(){
-    this.isAction = !this.isAction;
-    console.log(this.isAction);
-    }
+
 }

@@ -185,10 +185,21 @@ form > table{
    padding-top: 10px;
    background-color: rgba(255, 255, 255,0.9);
    width: 100%;
-   border: 1px solid var(--secondaryColor);
+   /* border: 1px solid var(--secondaryColor); */
    border-radius: 10px;
    /* border: 1px solid black; */
 }
 .student__details__table{
     width: 100%;
 }
+.student__details__table > thead > tr > th{
+    color: rgb(158, 158, 158);
+    /* padding-right: 5%; */
+}
+.student__details__table > thead > tr > th:nth-child(4){
+    
+    padding-left: 18%;
+}
+.student__actions{
+    margin-left: 10%;
+  }

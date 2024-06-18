@@ -10,7 +10,7 @@
     /* z-index: 100; */
 }
 .student__popup{
-    height: 400px;
+    height: 450px;
     width: 50%;
     background-color: rgba(255, 255, 255);
     /* margin-top: 50px; */
@@ -21,7 +21,8 @@
 .student__popup__close{
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: space-between;
+    padding-left: 3%;
     /* border: 1px solid black; */
 }
 .student__popup__close span{
@@ -44,28 +45,48 @@
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    /* border: 1px solid black; */
 }
 .student__popup__img{
-    width: 30%;
-    /* border: 1px solid black; */
+    width: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 10%;
+    /* border: 1px solid; */
+    
 }
 .student__popup__img img{
     height: 150px;
     width: 150px;
 }
 .student__popup__details{
-    width: 70%;
+    width: 65%;
     /* border: 1px solid black; */
     text-transform: capitalize;
     color: rgba(16, 95, 90, 0.9);
+    margin-left: 20px;
+}
+.student__popup__details > table > thead > tr > th{
+    padding-bottom: 10px;
+    /* border-bottom: 1px solid; */
 }
 .student__popup__details table tr{
     padding: 10px;
 }
-.student__popup__details > table > tr > td:nth-child(2){
-    margin-left: 10px;
 
+.student__table__tbody > tr:nth-child(1){
+   /* border: 1px solid; */
+   /* padding-top: 25px; */
+}
+.student__table__tbody{
+    display: block;
+    margin-top: 20px;
+}
+.student__table__tbody > tr > td{
+   /* border: 1px solid; */
+   padding: 5px;
+}
+.student__table__tbody > tr > td:nth-child(1){
+   font-weight: bold;
 }

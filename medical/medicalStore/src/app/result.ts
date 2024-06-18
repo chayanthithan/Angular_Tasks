@@ -13,5 +13,4 @@ export interface Result {
     term_end_date:string;
     marksList:Marks[];
 
-
 }

@@ -23,4 +23,5 @@ export class StudentPreviewComponent {
   @Input() contactNo = '';
   @Input() grade = '';
   @Input() link = '';
+  @Input() img_name = 'student.jpg';
 }

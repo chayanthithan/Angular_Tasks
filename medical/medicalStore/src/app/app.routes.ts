@@ -8,9 +8,12 @@ import { AddExamresultComponent } from './add-examresult/add-examresult.componen
 import { AddmarksComponent } from './addmarks/addmarks.component';
 import { ResultpreviewComponent } from './resultpreview/resultpreview.component';
 import { ReportpreviewComponent } from './reportpreview/reportpreview.component';
+import { ChartsComponent } from './charts/charts.component';
+import { HomeComponent } from './home/home.component';
 
 export const routes: Routes = [
-    {path:'',component:StudentComponent,title:'student'},
+    // {path:'/',component:HomeComponent,title:'home'},
+    {path:'student',component:StudentComponent,title:'student'},
     {path:'teacher',component:TeachersComponent,title:'teacher'},
     {path:'addnew',component:AddnewComponent,title:'new student'},
     {path:'add-teacher',component:AddnewTeacherComponent,title:'add teacher'},
@@ -19,4 +22,5 @@ export const routes: Routes = [
     {path:'add-marks',component:AddmarksComponent,title:'add exam marks'},
     {path:'preview/:id',component:ResultpreviewComponent,title:'result preview'},
     {path:'report-preview/:id',component:ReportpreviewComponent,title:'report preview'},
+    {path:'charts',component:ChartsComponent,title:'charts'},
 ];
