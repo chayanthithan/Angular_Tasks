@@ -1,4 +1,4 @@
-.left__pannel{
+/* .left__pannel{
     background-color:rgb(243, 243, 243);
     display: flex;
     justify-content: flex;
@@ -23,10 +23,16 @@
 }
 .left__menu__icon{
     font-size:30px;
-    /* padding-left: 10%; */
+   padding-left: 10%; 
 }
 .left__menu__name{
     font-size: 18px;
     font-weight: lighter;
-    /* padding-left: 2%; */
-}
+     padding-left: 2%; 
+} */
+ .left__panel__block{
+    display: block;
+ }
+ .left__panel__none{
+    display: none;
+ }

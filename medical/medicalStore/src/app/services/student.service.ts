@@ -40,7 +40,6 @@ export class StudentService {
 
   // select student
   setSelectedStudent(obj:any | null){
-    debugger
     this.selectedStudent = obj as Student;
     
   }

@@ -203,3 +203,19 @@ form > table{
 .student__actions{
     margin-left: 10%;
   }
+
+  @media screen and (main-width:320px){
+   
+  }
+  @media screen and (main-width:375px){
+    
+  }
+  @media screen and (main-width:425px){
+    
+  }
+  @media screen and (main-width:768px){
+    
+  }
+  @media screen and (main-width:1024px){
+    
+  }

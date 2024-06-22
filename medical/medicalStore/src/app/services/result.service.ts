@@ -85,7 +85,6 @@ export class ResultService implements OnInit{
   }
 
   addMarks(){
-    debugger
     if(this.editFlag === false){
       this.resultObj.marksList.push(this.marksObj);
     }else{
@@ -138,7 +137,7 @@ export class ResultService implements OnInit{
     },
     {    
       result_id:1,
-      student_id:'02',
+      student_id:'2',
       term:'fourth',
       grade:'10',
       total_marks:900,
@@ -152,7 +151,7 @@ export class ResultService implements OnInit{
     },
     {    
       result_id:3,
-      student_id:'03',
+      student_id:'3',
       term:'first',
       grade:'10',
       total_marks:900,
@@ -165,7 +164,7 @@ export class ResultService implements OnInit{
       marksList:[]
     },{    
       result_id:4,
-      student_id:'04',
+      student_id:'4',
       term:'second',
       grade:'10',
       total_marks:900,
@@ -179,7 +178,7 @@ export class ResultService implements OnInit{
     },
     {    
       result_id:5,
-      student_id:'05',
+      student_id:'5',
       term:'third',
       grade:'10',
       total_marks:900,
@@ -193,7 +192,7 @@ export class ResultService implements OnInit{
     },
     {    
       result_id:6,
-      student_id:'06',
+      student_id:'6',
       term:'first',
       grade:'10',
       total_marks:900,
@@ -234,7 +233,7 @@ export class ResultService implements OnInit{
     },
     {    
       result_id:9,
-      student_id:'09',
+      student_id:'1',
       term:'second',
       grade:'10',
       total_marks:900,
@@ -248,7 +247,7 @@ export class ResultService implements OnInit{
     },
     {    
       result_id:10,
-      student_id:'10',
+      student_id:'9',
       term:'first',
       grade:'10',
       total_marks:900,

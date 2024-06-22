@@ -12,9 +12,9 @@
         <div class="student__searchbar">
             <div class="student__Search-and-input">
                 <span class="material-symbols-outlined icon__color">search</span>
-                <input type="text">
+                <input type="text" [(ngModel)]="this.searchElement">
             </div>
-            <div class="stuent__star">
+            <div class="stuent__star" (click)="searchStudent()">
                 <span class="material-symbols-outlined icon__color">kid_star</span>
             </div>
         </div>
@@ -48,6 +48,9 @@
                 <app-student-preview (click)="__student. setSelectedStudent(stuObj)"  [firstName]="stuObj.first_name" [lastName]="stuObj.last_name" [grade]="stuObj.grade" [contactNo]="stuObj.contact"></app-student-preview>
             </div> -->
         <!-- </div> -->
+    </div>
+    <div>
+        <button (click)="print()">print</button>
     </div>
     <!-- <div>
         <p-table  [tableStyle]="{'min-width': '60rem'}">

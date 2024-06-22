@@ -19,7 +19,32 @@ import { ResultService } from './services/result.service';
 })
 export class AppComponent implements OnInit{
   title = 'medicalStore';
-  constructor(private config: PrimeNGConfig) {}
+  constructor(private config: PrimeNGConfig) {
+    document.addEventListener('DOMContentLoaded', () => {
+      let inactivityTime = function() {
+          let time:any;
+          const alertTime =  5 * 60 * 1000; // 5 minutes
+  
+          // Reset the timer
+          function resetTimer() {
+              clearTimeout(time);
+              time = setTimeout(() => {
+                  alert('You have been inactive for 5 minutes.');
+              }, alertTime);
+          }
+  
+          // Event listeners to detect user activity
+          window.onload = resetTimer;
+  document.onmousemove = resetTimer;
+          document.onkeypress = resetTimer;
+          document.ontouchstart = resetTimer; // For mobile devices
+          document.onclick = resetTimer; // Click events
+          document.onscroll = resetTimer; // Scroll events
+      };
+  
+      inactivityTime(); // Initialize the inactivity timer
+  });
+  }
   __student:StudentService = inject(StudentService);
   __result:ResultService = inject(ResultService);
     ngOnInit() {
@@ -28,5 +53,6 @@ export class AppComponent implements OnInit{
             reject: 'Cancel',
             //translations
         });
+       
     }
 }

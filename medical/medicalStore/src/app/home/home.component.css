@@ -1,16 +1,23 @@
 .home{
     /* background-color: var(--home); */
-    padding-left: 5%;
-    padding-right:5%;
+    padding-left: 2%;
+    padding-right:2%;
     padding-top:3%;
     
 }
-/* .home__left{
+.home__left{
     width: 12%;
+    /* border: 1px solid; */
+    float: left;
 }
 .left__mini{
     width: 5%;
-} */
-/* .home__right{
+}
+.home__right{
     width: 88%;
+    /* border: 1px solid; */
+    float: right;
+}
+/* @media screen and (min-width: 480px) {
+   
 } */

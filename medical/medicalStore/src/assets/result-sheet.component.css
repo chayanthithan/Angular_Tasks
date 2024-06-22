@@ -5,7 +5,6 @@
     padding-bottom: 10%;
     position: absolute;
     top: 0;
-    font-size: 15px;
 }
 .student__result__centent{
     height: 100vh;
@@ -29,7 +28,6 @@
 .student__img img{
     height: 150px;
     width: 150px;
-    font-size: small;
 }
 .student__info{
     display: flex;
@@ -37,35 +35,28 @@
     justify-content: center;
     flex-direction: column;
     margin-top: 2%;
-    font-size: small;
 }
 .student__info table tbody tr td{
-    padding:2px 5px;
-    font-size: small;
+    padding: 5px;
 }
 .student__marks{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* margin-top: 1%; */
-    font-size: small;
+    margin-top: 1%;
 }
 .student__marks__name{
     margin-right: 30%;
     padding: 10px;
-    font-size: small;
-    font-weight: bold;
 }
 .student__marks table{
     border: 1px solid;
     width: 80%;
-    font-size: small;
 }
 .student__marks table tr td{
     border: 1px solid;
     padding: 5px 30px;
-    font-size: small;
 }
 .result__actions{
     display: flex;
@@ -85,23 +76,4 @@
     
     /* background-color: var(--secondaryColor); */
     background-color:rgb(255, 255, 255);
-}
-.print__student__info{
-    display: none;
-}
-
-/* this is for print */
-@media print{
-    .print__student__info{
-        background-color: rgb(143, 101, 3);
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        color: burlywood;
-    }
-    .student__img{
-        display: none;
-    }
-    
 }

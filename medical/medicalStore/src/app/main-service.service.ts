@@ -1,12 +1,12 @@
 import { DOCUMENT } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Inject, Injectable } from '@angular/core';
+import { HostListener, Inject, Injectable, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
 })
-export class MainServiceService {
+export class MainServiceService{
   previousUrl: string = '';
   currentUrl: string = '';
 
@@ -17,12 +17,22 @@ export class MainServiceService {
         this.currentUrl = event.urlAfterRedirects;
       }
     })
+    // if (!window.onbeforeunload) {
+    //   window.onbeforeunload = (e) => {
+    //     e.preventDefault();
+    //     return true;
+    //     };
+    // }
   }
-
+  
   isMinimized:boolean=true;
+  isHeaderAction:boolean=false;
   isAction:boolean = false;
   toggle(){
     this.isMinimized = !this.isMinimized;
+  }
+  toggleHeaderAction(){
+    this.isHeaderAction = !this.isHeaderAction ;
   }
   resetMenu(){
     document.getElementById('h__student')?.classList.remove(...['menu__select']);

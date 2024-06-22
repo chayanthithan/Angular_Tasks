@@ -1,4 +1,10 @@
 <div class="home">
-    <app-rt-panel></app-rt-panel>
+    <div class="home__left">
+        <app-lt-panel></app-lt-panel>
+    </div>
+    <div [ngClass]="!mainservice.isMinimized?'home__right':''">
+         <app-rt-panel></app-rt-panel>
+    </div>
+   
 </div>
     

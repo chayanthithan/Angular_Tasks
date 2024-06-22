@@ -27,6 +27,7 @@ export class StudentComponent{
   __student:StudentService = inject(StudentService)
   studentObj:Student[]=[];
   isAddNewStudent:boolean = false;
+  searchElement:string = '';
   studentReactiveForm!: FormGroup;
   student={
     id:'',
@@ -69,16 +70,15 @@ value!:string;
   }
 
   onSubmit(){
-    debugger
       if(this.studentReactiveForm.valid){
-        this.student.first_name=this.studentReactiveForm.get('first_name')?.value,
-        this.student.last_name=this.studentReactiveForm.get('last_name')?.value,
-        this.student.dob=this.studentReactiveForm.get('dob')?.value,
-        this.student.gender=this.studentReactiveForm.get('gender')?.value,
-        this.student.address=this.studentReactiveForm.get('address')?.value,
-        this.student.district=this.studentReactiveForm.get('district')?.value,
-        this.student.contact=this.studentReactiveForm.get('contact')?.value,
-        this.student.grade=this.studentReactiveForm.get('grade')?.value
+        this.student.first_name = this.studentReactiveForm.get('first_name')?.value,
+        this.student.last_name = this.studentReactiveForm.get('last_name')?.value,
+        this.student.dob = this.studentReactiveForm.get('dob')?.value,
+        this.student.gender = this.studentReactiveForm.get('gender')?.value,
+        this.student.address = this.studentReactiveForm.get('address')?.value,
+        this.student.district = this.studentReactiveForm.get('district')?.value,
+        this.student.contact = this.studentReactiveForm.get('contact')?.value,
+        this.student.grade = this.studentReactiveForm.get('grade')?.value
         this.studentObj.push(this.student);
       }
   }
@@ -95,6 +95,25 @@ toggleDropdown() {
   this.isDropdownVisible = !this.isDropdownVisible;
 }
 
+print()
+{
+  window.print()
+}
 
+// search functionality
+searchStudent(){
+  if(this.searchElement === ''){
+    alert('please enter correct name to search');
+  }else{
+    // console.log("search element",this.searchElement);
+    // console.log('this.__student.student',this.__student.student);
+    
+    this.__student.student = this.__student.student.filter(obj=>
+      obj.first_name.includes(this.searchElement) || 
+      obj.last_name.includes(this.searchElement)
+    );
+    // console.log('this.__student.student',this.__student.student);
+  }
+}
 
 }

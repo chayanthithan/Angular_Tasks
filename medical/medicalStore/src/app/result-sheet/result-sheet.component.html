@@ -1,4 +1,4 @@
-<div class="student__result">
+<div id="student__result" class="student__result">
     <div class="student__result__centent">
         <div class="student__result__border">
             <div class="student__img">
@@ -35,7 +35,7 @@
                         <tr>
                             <td>Teacher Name</td>
                             <td>:</td>
-                            <td>-</td>
+                            <td>{{getTeacherObj.first_name}}{{' '}}{{getTeacherObj.last_name}}</td>
                         </tr>
                         <tr>
                             <td>Teacher Opinion</td>
@@ -91,9 +91,98 @@
                 </div>
             </div>
             <div class="result__actions" id="print-section">
-                <button printSectionId="print-section" ngxPrint>Print</button>
+                <button (click)="print()">Print</button>
                 <button (click)="__result.cancelResultSheetPopup()">Cancel</button>
             </div>
+        </div>
+    </div>
+</div>
+<!-- this si the div for print -->
+<div class="print__student__info">
+    <div class="student__info">
+        <table>
+            <tbody>
+                <tr>
+                    <td>Full Name</td>
+                    <td>:</td>
+                    <td>{{getStudentObj.first_name}}{{' '}}{{getStudentObj.last_name}}</td>
+                </tr>
+                <tr>
+                    <td>Grade</td>
+                    <td>:</td>
+                    <td>{{__result.setResultStudent.grade}}</td>
+                </tr>
+                <tr>
+                    <td>DOB</td>
+                    <td>:</td>
+                    <td>{{getStudentObj.dob}}</td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>:</td>
+                    <td>{{getStudentObj.gender}}</td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>:</td>
+                    <td>{{getStudentObj.address}}</td>
+                </tr>
+                <tr>
+                    <td>Teacher Name</td>
+                    <td>:</td>
+                    <td>{{getTeacherObj.first_name}}{{' '}}{{getTeacherObj.last_name}}</td>
+                </tr>
+                <tr>
+                    <td>Teacher Opinion</td>
+                    <td>:</td>
+                    <td>{{__result.setResultStudent.teacher_opinion}}</td>
+                </tr>
+                <tr>
+                    <td>Attendance Days</td>
+                    <td>:</td>
+                    <td>{{__result.setResultStudent.attend_days}}</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+    <div class="student__marks">
+        <div class="student__marks__name">
+            Marks List
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <td>Tamil</td>
+                    <td>67</td>
+                    <td>B</td>
+                </tr>
+                <tr>
+                    <td>Maths</td>
+                    <td>70</td>
+                    <td>B</td>
+                </tr>
+                <tr>
+                    <td>Science</td>
+                    <td>50</td>
+                    <td>C</td>
+                </tr>
+                <tr>
+                    <td>English</td>
+                    <td>45</td>
+                    <td>C</td>
+                </tr>
+                <tr>
+                    <td>Religion</td>
+                    <td>90</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>ICT</td>
+                    <td>60</td>
+                    <td>C</td>
+                </tr>
+            </table>
         </div>
     </div>
 </div>
