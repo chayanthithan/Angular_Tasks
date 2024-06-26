@@ -1,14 +1,17 @@
 <div class="student__list">
     <div class="student__records">
         <div class="student__img">
-            <img src="../../assets/student3__img.png" alt="">
+            <img src="https://t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg" alt="">
         </div>
        <div class="student__left__col">
-        <td colspan="2">{{this.firstName}}{{' '}}{{this.lastName}}</td>
-        <td>{{grade}}</td>
-        <td>{{contactNo}}</td>
+            <td colspan="2">{{this.firstName}}{{' '}}{{this.lastName}}</td>
+            <td><span>Grade:</span>{{grade}} <span>Contact: </span>{{contactNo}}</td>
        </div>
       
+    </div>
+    <div class="student__actions">
+        <button class="student__actions__edit">Edit</button>
+        <button class="student__actions__delete">Delete</button>
     </div>
     
 </div>

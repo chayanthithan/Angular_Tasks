@@ -10,10 +10,11 @@ import { CommonModule } from '@angular/common';
 import { ChartsComponent } from './charts/charts.component';
 import { ResultSheetComponent } from './result-sheet/result-sheet.component';
 import { ResultService } from './services/result.service';
+import { TeacherDataComponent } from './teacher-data/teacher-data.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ResultSheetComponent,ChartsComponent,RouterOutlet,HeaderComponent,FooterComponent,HomeComponent,StudentDataComponent,CommonModule],
+  imports: [TeacherDataComponent,ResultSheetComponent,ChartsComponent,RouterOutlet,HeaderComponent,FooterComponent,HomeComponent,StudentDataComponent,CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -53,6 +54,11 @@ export class AppComponent implements OnInit{
             reject: 'Cancel',
             //translations
         });
-       
+
+        if (!window.onbeforeunload) {
+          window.onbeforeunload = () => {
+              return true;
+          };
+        }
     }
 }
