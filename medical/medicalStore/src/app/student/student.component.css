@@ -204,25 +204,61 @@ form > table{
     
     padding-left: 18%;
 }
+.student__records:hover{
+    background-color: #053b5025;
+    
+}
 .student__actions{
     margin-left: 10%;
     display: none;
-  }
+}
+.actions__btn{
+    display: none;
+    
+}
+.action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+}
+.print__btn{
+    display:flex;
+    justify-content: end;
+}
+.print__btn button{
+    padding: 10px 93px;
+    background-color: var(--secondaryColor);
+    color: white;
+    border: none;
+    outline: none;
+    margin-top: 5px;
+    margin-bottom: 10px;
 
+
+}
   @media screen and (main-width:320px){
    
   }
   @media screen and (main-width:375px){
     
   }
-  @media screen and (main-width:425px){
-    .student__actions{
-        margin-left: 10%;
-        display: block;
-      }
+  @media (max-width:425px){
+    .print__btn{
+        width: 100%;
+    }
+    .print__btn button{
+        width: 100%;
+    }
   }
-  @media screen and (main-width:768px){
-    
+  @media (max-width:768px){
+    .student__actions{
+      display: block;
+      margin-right: 3%;
+    }
+    .actions__btn{
+        display: block;
+    }
   }
   @media screen and (main-width:1024px){
     

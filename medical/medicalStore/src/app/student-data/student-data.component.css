@@ -11,29 +11,29 @@
 }
 .student__popup{
     height: 450px;
-    width: 50%;
+    width: 650px;
     background-color: rgba(255, 255, 255);
     /* margin-top: 50px; */
     border-radius: 10px;
     border: 1px solid rgba(5, 129, 120, 0.2);
-
 }
 .student__popup__close{
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-left: 3%;
+    background-color:var(--secondaryColor);
+    border-radius: 10px 10px 0px 0px;
+    color: white;
+    padding: 30px;
     /* border: 1px solid black; */
 }
 .student__popup__close span{
     width: fit-content;
     display: flex;
-    align-items: center;
-    justify-content: right;
     cursor: pointer;
     margin-right: 10px;
-    margin-top: 10px;
-    padding: 10px;
 }
 .student__popup__close span:hover{
     background-color: rgba(5, 129, 120, 0.2);
@@ -44,7 +44,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin: 20px;
     /* border: 1px solid black; */
 }
 .student__popup__img{
@@ -52,20 +52,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 10%;
+    margin-left: 20px;
+    /* margin-right: 10%; */
     /* border: 1px solid; */
     
 }
 .student__popup__img img{
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 100vw;
 }
 .student__popup__details{
     width: 65%;
     /* border: 1px solid black; */
     text-transform: capitalize;
     color: rgba(16, 95, 90, 0.9);
-    margin-left: 20px;
+    margin-right: 20px;
 }
 .student__popup__details > table > thead > tr > th{
     padding-bottom: 10px;
@@ -75,9 +76,11 @@
     padding: 10px;
 }
 
-.student__table__tbody > tr:nth-child(1){
-   /* border: 1px solid; */
-   /* padding-top: 25px; */
+.student__popup__bottom{
+    height: 10px;
+    background-color:var(--secondaryColor);
+    position: absolute;
+    bottom: 0;
 }
 .student__table__tbody{
     display: block;
@@ -89,4 +92,44 @@
 }
 .student__table__tbody > tr > td:nth-child(1){
    font-weight: bold;
+   text-align: center;
+
 }
+@media (max-width:425px){
+    .student__popup{
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(255, 255, 255);
+        /* margin-top: 50px; */
+        border-radius: 10px;
+        border: 1px solid rgba(5, 129, 120, 0.2);
+        position: relative;
+    }
+    .student__popup__records{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .student__popup__details{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left:90px;
+        
+    }
+    .student__table__tbody > tr > td:nth-child(1){
+      font-size: small;
+     
+     }
+     .student__table__tbody > tr > td{
+        padding: 3px;
+     }
+}
+@media (max-width:768px){
+    .student__popup__img img{
+        height: 200px;
+        width: 200px;
+    }
+}
+  @media screen and (main-width:1024px){
+  
+  }

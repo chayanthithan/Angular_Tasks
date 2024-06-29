@@ -1,19 +1,24 @@
 .student__list{
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 5px 0px;
 }
 .student__records{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     width: 100%;
     cursor: pointer;
+    /* justify-content: center; */
 }
 
 .student__img img{
-  height: 50px;
-  width: 50px;
+  height: 45px;
+  width: 45px;
   border-radius: 2px;
   margin-left: 25px;
+  display: flex;
+  justify-content: center;
 }
 .student__left__col{
     width: 80%;
@@ -23,14 +28,10 @@
     justify-content: space-around;
     margin-left: 25px;
 }
-.student__left__col{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+
 .student__left__col td:nth-child(1){
-  font-size: larger;
-  font-weight: bold;
+  font-size: large;
+  font-weight: 700;
   /* border: 1px solid red; */
 }
 .student__left__col td:nth-child(2){
@@ -44,7 +45,8 @@
 }
 .student__actions{
   display: flex;
-  width: 20%;
+  width: 18%;
+
 }
 .student__actions__edit{
   padding: 10px;
@@ -63,6 +65,7 @@
   border:1px solid red;
   background-color: white;
   margin-left: 10px;
+  margin-right: 30px;
   width: 50%;
   border-radius: 3px;
 }
@@ -72,3 +75,26 @@
   color: white;
 }
 
+@media screen and (main-width:320px){
+   
+}
+@media screen and (main-width:375px){
+  
+}
+@media screen and (main-width:425px){
+  
+}
+@media (max-width:768px){
+  .actions__btn{
+    display: block;
+    border:none
+  }
+  .student__actions{
+    display: none;
+    border: none;
+    
+  }
+}
+@media screen and (main-width:1024px){
+  
+}

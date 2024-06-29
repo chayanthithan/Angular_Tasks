@@ -102,7 +102,7 @@ body{
     border-radius: 5px;
     display: block;
     top: 0px;
-    left: 30px;
+    right: 30px;
     border: 1px solid rgba(23, 107, 135,0.1);
  }
  .dropdown-content__hidden{
