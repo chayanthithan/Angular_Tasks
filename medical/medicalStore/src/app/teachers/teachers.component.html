@@ -1,4 +1,4 @@
-<div class="students">
+<!-- <div class="students">
     <div *ngIf="!isAddNewTeacher" class="student__list">
         <div class="students__list__header">
             <div class="students__list__title">
@@ -22,13 +22,8 @@
             <table>
                 <thead class="student__table__thead">
                     <tr class="student__table__thead__tr">
-                        <!-- <th>id</th> -->
                         <th>firstname</th>
                         <th>lastname</th>
-                        <!-- <th>DOB</th> -->
-                        <!-- <th>gender</th> -->
-                        <!-- <th>address</th> -->
-                        <!-- <th>district</th> -->
                         <th>contact</th>
                         <th>grade</th>
                         <th>Actions</th>
@@ -36,13 +31,8 @@
                 </thead>
                 <tbody class="student__table__tbody" *ngFor="let item of teacherObj">
                     <tr>
-                        <!-- <td>{{item.id}}</td> -->
                         <td (click)="__student. setSelectedStudent(item)">{{item.first_name}}</td>
                         <td>{{item.last_name}}</td>
-                        <!-- <td>{{item.dob}}</td> -->
-                        <!-- <td>{{item.gender}}</td> -->
-                        <!-- <td>{{item.address}}</td> -->
-                        <!-- <td>{{item.district}}</td> -->
                         <td>{{item.contact}}</td>
                         <td>{{item.grade}}</td>
                         <td>
@@ -60,4 +50,56 @@
             </table>
         </div>
     </div>
+</div> -->
+<div class="students ">
+    <div class="student__list">
+        <div class="students__list__header">
+            <div class="students__list__title">
+                <span class="material-symbols-outlined">account_circle</span> 
+                <span>Student main details</span>
+            </div>
+            <a routerLink="/addnew" class="student__list__options">
+                <button><span class="material-symbols-outlined">person_add</span>AddNew</button>
+            </a>
+        </div>
+        <div class="student__searchbar">
+            <div class="student__Search-and-input">
+                <span class="material-symbols-outlined icon__color">search</span>
+                <input type="text" >
+            </div>
+            <div class="stuent__star" >
+                <span class="material-symbols-outlined icon__color">kid_star</span>
+            </div>
+        </div>
+        <div class="student__details">
+            <table class="student__details__table">
+                <thead>
+                    <!-- <tr>
+                        <th>FullName</th>
+                        <th>Actions</th>
+                    </tr> -->
+                </thead>
+                <tbody>
+                    <tr class="student__records" *ngFor="let stuObj of __teacher.teacher">
+                        <td colspan="4">
+                            <app-teacher-preview (click)="__student. setSelectedStudent(stuObj)"  [firstName]="stuObj.first_name" [lastName]="stuObj.last_name" [grade]="stuObj.grade" [contactNo]="stuObj.contact"></app-teacher-preview>
+                        </td>
+                        <td class="actions__btn">
+                             <app-actions class="action"></app-actions>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+        <!-- <div class="student__list__table"> -->
+            <!-- <div *ngFor="let stuObj of __student.student" >
+                <app-student-preview (click)="__student. setSelectedStudent(stuObj)"  [firstName]="stuObj.first_name" [lastName]="stuObj.last_name" [grade]="stuObj.grade" [contactNo]="stuObj.contact"></app-student-preview>
+            </div> -->
+        <!-- </div> -->
+    </div>
+    <div class="print__btn">
+        <button >print</button>
+    </div>
 </div>
+

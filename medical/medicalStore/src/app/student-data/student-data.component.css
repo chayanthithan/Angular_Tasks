@@ -34,11 +34,12 @@
     display: flex;
     cursor: pointer;
     margin-right: 10px;
+    padding: 10px;
 }
 .student__popup__close span:hover{
-    background-color: rgba(5, 129, 120, 0.2);
+    background-color: rgba(253, 253, 253, 0.2);
     border-radius: 50%;
-    
+    padding: 10px;
 }
 .student__popup__records{
     display: flex;

@@ -259,6 +259,9 @@ form > table{
     .actions__btn{
         display: block;
     }
+    .print__btn button{
+        width: 100%;
+    }
   }
   @media screen and (main-width:1024px){
     

@@ -12,8 +12,6 @@ import { StudentService } from '../services/student.service';
   styleUrl: './actions.component.css'
 })
 export class ActionsComponent {
-  __main:MainServiceService = inject(MainServiceService);
-  __student:StudentService = inject(StudentService)
   isAction:boolean = false;
   triggerAction(){
     this.isAction = !this.isAction;

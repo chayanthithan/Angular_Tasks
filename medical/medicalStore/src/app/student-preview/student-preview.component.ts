@@ -23,5 +23,21 @@ export class StudentPreviewComponent {
   @Input() contactNo = '';
   @Input() grade = '';
   @Input() link = '';
+  @Input() id = '';
+  @Input()   stuObj={
+    id:'',
+    first_name:'',
+    last_name:'',
+    dob:'',
+    gender:'',
+    address:'',
+    district:'',
+    contact:'',
+    grade:'',
+    link:''
+};
   @Input() img_name = 'student.jpg';
+  editStudent(){
+    
+  }
 }

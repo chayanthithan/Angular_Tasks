@@ -1,0 +1,95 @@
+.project__section{
+    height: 100vh;
+    width: 100%;
+}
+.project__content{
+    display: flex;
+    width: 100%;
+}
+.left{
+    width: 100%;
+}
+.left__content{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+/* .popup__component{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+} */
+.left__div{
+    /* width:22%; */
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: black;
+}
+.center__div{
+    /* width:48%; */
+    box-shadow: 0px 0px 10px rgba(255,255,255,0.9);
+    border-radius: 5px;
+}
+.right__div{
+    /* width:22%; */
+    border-radius: 5px;
+    overflow: hidden;
+}
+.arrow_right,.arrow_left{
+    /* width: 10%; */
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+}
+.arrow_after_right,.arrow_after_left{
+    /* width: 10%; */
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+}
+.arrow_right span,.arrow_left span{
+    color: white;
+    font-size: 50px;
+    /* border: 1px solid; */
+    width: fit-content;
+    border-radius: 50%;
+}
+.arrow_after_right span,.arrow_after_left span{
+    color: rgb(224, 224, 224);
+    font-size: 50px;
+    /* border: 1px solid; */
+    width: fit-content;
+    border-radius: 50%;
+}
+.arrow_right span:hover,.arrow_left span:hover{
+    background: linear-gradient(rgba(2, 254, 208, 1),rgba(255,255,255,.9));
+    color:#0F172A;
+    cursor: pointer;
+}
+.arrow_after_right span:hover,.arrow_after_left span:hover{
+    /* background: linear-gradient(rgb(65, 65, 65),rgba(115, 115, 115, 0.9)); */
+    border:1px solid aqua;
+    color:#8c8c8cd6;
+    cursor: pointer;
+    font-size: 50px;
+}
+.right{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.right__shape{
+    height: 500px;
+    width: 500px;
+}
+.right__shape img{
+    height: 500px;
+    width: 500px;
+}

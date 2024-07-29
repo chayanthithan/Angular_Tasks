@@ -34,7 +34,7 @@ export class AddExamresultComponent implements OnInit{
  examResultReactive!:FormGroup;
 
  ngOnInit(): void {
-  debugger
+  // debugger
   this.studentList = this.studentservice.sendStudent();
   this.teacherList = this.teacherservice.getTeacherList();
   // this.examResultReactive = new FormGroup({

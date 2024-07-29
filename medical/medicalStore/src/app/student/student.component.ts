@@ -41,12 +41,22 @@ export class StudentComponent{
     grade:'',
     link:''
 };
-value!:string;
 
   constructor(private studentService:StudentService, private router:Router){
-   
+   console.log("constructor");
   }
-
+  ngDocheck(){
+    console.log('ngDocheck');
+  }
+  ngAfterViewInit(){
+    console.log('ngAfterViewInit');
+  }
+  ngAfterContentInit(){
+    console.log('ngAfterContentInit');
+  }
+  afterRender(){
+    console.log('afterRender');
+  }
   ngOnInit(): void {
     this.__main.resetMenu();
     document.getElementById('h__student')?.classList.add(...['menu__select']);
@@ -61,8 +71,18 @@ value!:string;
       contact:new FormGroup('',),
       grade: new FormGroup('',),
     })
+    console.log('ngOnInit')
+
 
     this.studentObj = this.studentService.sendStudent();
+  }
+
+  ngOnChanges(){
+    console.log('ngOnChanges');
+  }
+  
+  onDestroy(){
+    console.log('onDestroy');
   }
   
   changeValue(){
@@ -86,7 +106,9 @@ value!:string;
   previewResult(id:string){
     this.router.navigate(['/report-preview',id]);
   }
+  editStudent(id:string){
 
+  }
 // dropdown
 isDropdownVisible = false;
 // itemId = 'someItemId';  // Replace with the actual ID you want to use

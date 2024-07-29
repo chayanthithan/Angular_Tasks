@@ -1,0 +1,4 @@
+003E33 - main color
+00614F - button
+38A38F - input fields
+rgb 0,74,61 - hover

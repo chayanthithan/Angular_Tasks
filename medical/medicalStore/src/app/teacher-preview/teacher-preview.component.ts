@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-teacher-preview',
@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './teacher-preview.component.css'
 })
 export class TeacherPreviewComponent {
-
+  @Input() firstName = '';
+  @Input() lastName = '';
+  @Input() contactNo = '';
+  @Input() grade = '';
+  @Input() link = '';
+  @Input() img_name = 'student.jpg';
 }

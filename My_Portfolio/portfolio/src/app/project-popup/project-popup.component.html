@@ -1,0 +1,75 @@
+<div class="proj__popup">
+    <div class="proj__top">
+        <div class="proj__img">
+            <img src={{projectObj.imgName}} alt="">
+        </div>
+    </div>
+    <div class="proj__bottom">
+        <div class="bottom__content">
+            <!--projectDescription
+                frameworks
+                libraries
+                languages
+                database
+                projectYear
+                ides
+                projectDetails 
+            -->
+            <span class="proj__name">{{projectObj.projectName}}</span>
+            <!-- if it is has framework then first code will run -->
+             <!-- if it is not contain then 2 code will execute -->
+            <p *ngIf="projectObj.frameworks.length !== 0">A user-friendly tool built with <span>{{projectObj.frameworks[0]}}</span> and <span>{{projectObj.frameworks[1]}}</span> {{projectObj.projectDescription}}</p>
+            <p *ngIf="projectObj.frameworks.length === 0">A user-friendly tool built with <span>{{projectObj.languages[0]}}</span> and <span>{{projectObj.languages[1]}}</span> {{projectObj.projectDescription}}</p>
+            
+        </div>
+        <div class="bottom__btn">
+            <button>Explore Project</button>
+        </div>
+        <div class="proj__layer">
+            <div class="layer__icons">
+                <span class="material-symbols-outlined">expand_content</span>
+            </div>
+            <div class="layer__name">
+                <span>{{projectObj.projectName}}</span>
+            </div>
+            <div class="layer__frameworks" *ngIf="projectObj.frameworks.length !== 0">
+                <label for="">Frameworks</label>
+                <span>
+                    <tr *ngFor="let item of projectObj.frameworks">
+                        <!-- <td>Back-end</td>
+                        <td>:</td> -->
+                        <td>{{item}}</td>
+                    </tr>
+                </span>
+            </div>
+           
+            <div class="layer__frameworks" *ngIf="projectObj.database.length !== 0">
+                <label for="">Database</label>
+                <span>
+                    <tr>
+                        <!-- <td>Back-end</td>
+                        <td>:</td> -->
+                        <td>{{projectObj.database}}</td>
+                    </tr>
+                </span>
+            </div>
+            <div class="layer__tools" *ngIf="projectObj.ides.length !== 0">
+                <label for="">Tools</label>
+                <span *ngFor="let item of projectObj.ides">
+                    <li>{{item}}</li>
+                </span>
+            </div>
+            <div class="layer__duration">
+                <tr>
+                    <td>Year</td>
+                    <td>:</td>
+                    <td>{{projectObj.projectYear}}</td>
+                </tr>
+            </div>
+            <div class="layer__btn">
+                <button>Explore More</button>
+                <span class="material-symbols-outlined">open_in_new</span>
+            </div>
+        </div>
+    </div>
+</div>

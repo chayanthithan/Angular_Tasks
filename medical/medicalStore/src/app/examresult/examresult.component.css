@@ -47,12 +47,6 @@
    overflow-y: scroll;
     height: 300px;
 }
-.student__list__table table{
-    padding-top: 40px;
-    cursor: pointer;
-    margin-top: 50px;
-}
-
 
 .student__table__thead__tr > th{
     padding: 5px 10px;
@@ -65,38 +59,110 @@
 .student__table__tbody > tr{
     border: 1px solid red;
 }
+
 .student__table__tbody__tr > td{
     /* border: 1px solid black; */
     padding: 5px 15px;
     cursor: pointer;
 }
-.student__delete{
-   color: red;
+.student__list__table table{
+    width: 100%;
 }
-.student__delete__button,.student__edit__button{
+
+table > tr{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+table > tr:hover{
+  background-color: rgba(2, 95, 95, 0.1);
+}
+.student__list__right{
+    display: flex;
+}
+.student__list__right{
+    display: flex;
+}
+.student__img{
+    margin-right: 10px;
+}
+.examresult__details{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    color: rgb(143, 143, 143);
+}
+.examresult__details > td{
+    display: flex;
+    justify-content: space-between;
+}
+.inner__details{
+    display: flex;
+    flex-direction: column;
+}
+.examresult__details span{
+    padding-left: 10px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+.student__img img{
+    height: 45px;
+    width: 45px;
+    border-radius: 2px;
+    margin-left: 25px;
+    display: flex;
+    justify-content: center;
+  }
+.actions__content{
+    /* padding: 10px 20px; */
+    width: 15%;
+}
+.student__actions{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+  
+  }
+  .student__actions__edit{
+    padding: 10px;
+    border:1px solid var(--secondaryColor);
+    background-color: white;
+    width: 50%;
+    margin-right: 5px;
+    border-radius: 3px;
+  }
+  .student__actions__edit:hover{
+    background-color: var(--secondaryColor);
+    color: white;
+  }
+  .student__actions__delete{
+    padding: 10px;
+    border:1px solid red;
+    background-color: white;
+    width: 50%;
+    border-radius: 3px;
     margin-left: 5px;
-    outline: none;
+  }
+  .student__actions__delete:hover{
+   
+    background-color: red;
+    color: white;
+  }
+.action{
+    display: none;
 }
-.student__edit__button:hover{
-    background-color:rgb(7, 129, 74);
-    outline: none;
-}
-.student__delete__button:hover{
-    background-color:red;
-    outline: none;
-}
-.student__edit{
-   color: rgb(7, 129, 74);
-}
-.student__edit:hover{
-    color: rgb(255, 255, 255);
- }
- .student__delete:hover{
-    color: rgb(255, 255, 255);
- }
 
-
-
+@media (max-width:768px){
+    .action{
+      display: block;
+      border:none
+    }
+    .student__actions{
+      display: none;
+      border: none;
+      
+    }
+  }
  
  
  

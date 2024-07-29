@@ -1,7 +1,7 @@
 <div class="students__addNew">
     <div class="form__contant">
         <div class="form__fields">
-            <form action="" >
+            <form action="" [formGroup]="studentReactiveForm">
                 <table>
                     <tr>
                         <td><span class="span__data">First Name</span></td>
@@ -45,13 +45,15 @@
             </form>
         </div>
         <div class="form__img">
-            <img src="../../assets/student1.jpg" alt="">
+            <div class="form__img__div">
+                <img src="../../assets/student1.jpg" alt="">
+            </div>
             <button>Add Student</button>
         </div>
     </div>
     <div class="form__Actions">
-        <button>Save</button>
-        <button>Cancel</button>
+        <button (click)="saveStudent()">Save</button>
+        <button (click)="onCancel()">Cancel</button>
         <button (click)="onClose()">Close</button>
     </div>
 </div>

@@ -1,0 +1,37 @@
+<div class="project__section">
+    <div class="container">
+        <div class="project__heading">
+            <span>Projects</span>
+        </div>
+        <div class="project__content">
+            <div class="left">
+                <div class="left__content">
+                    <button [disabled]="enableLeftArrow" [ngClass]="enableLeftArrow ? 'arrow_after_left' : 'arrow_left' " (click)="previousProject()">
+                        <span class="material-symbols-outlined">arrow_left</span>
+                    </button>
+                    <div class="popup__component" *ngFor="let obj of __common.projectDetails.slice(__common.startIndex,__common.itemsToShow)">
+                        <!-- <div class="left__div">
+                            <app-project-popup></app-project-popup>
+                        </div>
+                        <div class="center__div">
+                            <app-project-popup></app-project-popup>
+                        </div> -->
+                        <!-- <div class="right__div"> -->
+                            <app-project-popup [projectObj]="obj"></app-project-popup>
+                        <!-- </div> -->
+                    </div>
+                    
+                    <button [disabled]="enableRightArrow"  [ngClass]="enableRightArrow ? 'arrow_after_right' : 'arrow_right' " (click)="nextProject()">
+                        <span class="material-symbols-outlined">arrow_right </span>
+                    </button>
+                </div>
+            </div>
+            <!-- <div class="right">
+                <div class="right__shape">
+                    <img src="../../assets/shape_4.png" alt="">
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+</div>

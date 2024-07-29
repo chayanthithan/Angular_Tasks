@@ -1,0 +1,85 @@
+.about__section{
+    height: 100vh;
+    width: 100%;
+}
+.about__heading{
+    /* border: 1px solid; */
+    height: 5vh;
+}
+.about__content{
+    width: 100%;
+    display: flex;
+}
+.left{
+    width: 50%;
+    height: 95vh;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.left__shape{
+    height: 500px;
+    width: 500px;
+   
+    /* border: 3px solid white; */
+}
+.left__shape img{
+    height: 500px;
+    width: 500px;
+}
+.right{
+    width: 50%;
+    height: 95vh;
+    /* border: 1px solid; */
+    color: white;
+}
+.right__content{
+   /* border: 1px solid; */
+   height: 500px;
+   display: flex;
+   justify-content: center;
+   align-items: start;
+   flex-direction: column;
+}
+.right__content span{
+    font-size: 20px;
+    text-align: justify;
+}
+.right__content h1 span{
+   color: aqua;
+   font-size: 30px;
+}
+/* .right__content span{
+    font-size: 20px;
+} */
+.about__btn{
+    width: 75%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    text-wrap: nowrap;
+    justify-content: space-between;
+}
+.about__btn button{
+    padding: 10px 30px;
+    border: 1px solid aqua;
+    outline: none;
+    background-color: transparent;
+    text-transform: uppercase;
+    color: aqua;
+    font-size: 15px;
+    box-shadow: 1px 1px 20px rgba(255, 255, 255,0.2);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.about__btn button svg{
+ margin-left:10px;
+}
+.about__btn button:hover{
+    background-color:white;
+    text-transform: uppercase;
+    color:rgb(0, 85, 70);
+    cursor: pointer;
+}

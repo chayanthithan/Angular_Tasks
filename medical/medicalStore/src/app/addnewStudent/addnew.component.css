@@ -1,76 +1,83 @@
 /* form css*/
+.students__addNew{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   justify-content: space-around;
+   height: 78vh;
+   width: 90%;
+   margin: auto;
+}
 .form__contant{
     display: flex;
-    flex-direction: row;
-    margin-top: 30px;
-    /* border: 1px solid black; */
+    justify-content: space-between;
+    width: 100%;
  }
  .form__fields{
     width: 70%;
+   margin-right: 20px;
  }
  .form__fields > form > table > tr > td{
-    margin-top: 5px;
+    /* margin-top: 5px; */
  }
  .form__fields > form > table > tr > td:nth-child(1){
-    text-align: right;
-    padding-right: 20px;
+    text-align: left;
+    /* padding-right: 20px; */
  }
 form > table{
     width: 100%;
 }
  .form__img{
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* border: 1px solid black; */
+   width: 30%;
+   /* margin-left: 20px; */
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   /* border: 1px solid; */
  }
- .form__img img{
-   height: 100%;
-   width: 80%;
+ .form__img {
+   /* height: 100%; */
+
+ }
+ .form__img__div{
+   width: 100%;
+}
+.form__img__div img{
+   object-fit: cover;
+   height: 44vh;
+   width: 100%;
 
  }
  .form__img button{
-    margin-top: 20px;
-    padding: 2%;
-    width: 80%;
+    width: 100%;
     background-color: var(--secondaryColor);
     outline: none;
     border: none;
+    padding:8px 15px;
+    color: white;
   }
  .span__data{
-    width: 30%;
+    width: 100%;
     font-size: large;
  }
 .input__data{
-    width: 60%;
+    width: 100%;
     padding:8px 15px;
-    margin-top: 8px;
     outline: none;
     border: none;
-    /* text-align: center; */
-}
-.select__data{
-    width: 66%;
-
-    /* border: 1px solid black; */
 }
 .form__Actions{
-    width: 30%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: 23.8%;
-    /* border: 1px solid black; */
- }
- .form__Actions button{
-    width: 30%;
-    padding:8px 20px;
-    background-color: var(--secondaryColor);
-    outline: none;
-    border: none;
-    margin-top: 20px;
-    cursor: pointer;
+   }
+   .form__Actions button{
+      width: 30%;
+      padding:8px 20px;
+      background-color: var(--secondaryColor);
+      outline: none;
+      border: none;
+      cursor: pointer;
+      color: white;
  }

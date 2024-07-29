@@ -6,11 +6,7 @@
     display: flex;
     justify-content: space-between;
 }
-.students__list__title{
-    font-size: large;
-    display: flex;
-    align-items: center;
-}
+
 .student__list__options button{
     padding: 8px 15px;
     border-radius: 10px;
@@ -40,16 +36,18 @@
    display: flex;
    justify-content: center;
    align-items: center;
+   margin: auto;
    padding-top: 10px;
    background-color: rgba(255, 255, 255,0.9);
    width: 100%;
    /* border: 1px solid var(--secondaryColor); */
    border-radius: 10px;
-   /* border: 1px solid black; */
+   height: 300px;
+   overflow: scroll;
 }
 
 .student__table__thead__tr > th{
-    padding: 5px;
+    padding: 5px 10px;
     margin-top: 10px;
     font-size: large;
     text-align: center;
@@ -57,21 +55,27 @@
 }
 
 .student__table__tbody{
+    /* background-color: var(--textColor); */
 }
-.student__table__tbody > tr > td{
-  
-    padding:5px 15px;
-    text-transform: capitalize;
+.student__table__tbody > tr{
+    border: 1px solid red;
 }
-
+.student__table__tbody__tr > td{
+    /* border: 1px solid black; */
+    padding: 5px 15px;
+}
 .student__delete{
    color: red;
 }
-.student__delete__button,.student__edit__button{
+.student__result{
+    color: var(--secondaryColor);
+ }
+.student__delete__button,.student__edit__button,.student__result__button{
     margin-left: 5px;
     outline: none;
     border: none;
     background-color: transparent;
+    cursor: pointer;
 }
 .student__edit__button:hover{
     background-color:rgb(7, 129, 74);
@@ -93,6 +97,172 @@
 
 
 
- 
- 
- 
+ /* form css*/
+ .form__contant{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    /* border: 1px solid black; */
+ }
+ .form__fields{
+    width: 70%;
+ }
+ .form__fields > form > table > tr > td{
+    margin-top: 5px;
+ }
+ .form__fields > form > table > tr > td:nth-child(1){
+    text-align: right;
+    padding-right: 20px;
+ }
+form > table{
+    width: 100%;
+}
+ .form__img{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid black; */
+ }
+ .form__img img{
+   height: 100%;
+   width: 80%;
+
+ }
+ .form__img button{
+    margin-top: 20px;
+    padding: 2%;
+    width: 80%;
+    background-color: var(--secondaryColor);
+    outline: none;
+    border: none;
+  }
+ .span__data{
+    width: 30%;
+    font-size: large;
+ }
+.input__data{
+    width: 60%;
+    padding:8px 15px;
+    margin-top: 8px;
+    outline: none;
+    border: none;
+    /* text-align: center; */
+}
+.select__data{
+    width: 66%;
+
+    /* border: 1px solid black; */
+}
+.form__Actions{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 23.8%;
+    /* border: 1px solid black; */
+ }
+ .form__Actions button{
+    width: 30%;
+    padding:8px 20px;
+    background-color: var(--secondaryColor);
+    outline: none;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+ }
+
+ /* dropdown */
+ /* Style the dropdown container */
+/* student__component__load */
+.student__component__load
+{
+   
+}
+.student__details{
+   padding-top: 10px;
+   background-color: rgba(255, 255, 255,0.9);
+   width: 100%;
+   height: 300px;
+   overflow-y: scroll;
+   /* border: 1px solid var(--secondaryColor); */
+   border-radius: 10px;
+   /* border: 1px solid black; */
+}
+.student__details__table{
+    width: 100%;
+}
+.student__details__table > thead > tr > th{
+    color: rgb(158, 158, 158);
+    display: flex;
+    flex-direction: column;
+    /* padding-right: 5%; */
+}
+.student__details__table > thead > tr > th:nth-child(4){
+    
+    padding-left: 18%;
+}
+.student__records:hover{
+    background-color: #053b5025;
+    
+}
+.student__actions{
+    margin-left: 10%;
+    display: none;
+}
+.actions__btn{
+    display: none;
+    
+}
+.action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+}
+.print__btn{
+    display:flex;
+    justify-content: end;
+}
+.print__btn button{
+    padding: 10px 93px;
+    background-color: var(--secondaryColor);
+    color: white;
+    border: none;
+    outline: none;
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+
+}
+  @media screen and (main-width:320px){
+   
+  }
+  @media screen and (main-width:375px){
+    
+  }
+  @media (max-width:425px){
+    .print__btn{
+        width: 100%;
+    }
+    .print__btn button{
+        width: 100%;
+    }
+  }
+  @media (max-width:768px){
+    .student__actions{
+      display: block;
+      margin-right: 3%;
+    }
+    .actions__btn{
+        display: block;
+    }
+    .print__btn button{
+        width: 100%;
+    }
+  }
+  @media screen and (main-width:1024px){
+    
+  }

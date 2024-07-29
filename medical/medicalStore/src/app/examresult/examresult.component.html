@@ -20,45 +20,35 @@
             </div>
         </div>
         <div class="student__list__table">
-            <table>
-                <thead class="student__table__thead">
-                    <tr class="student__table__thead__tr">
-                        <th>Id</th>
-                        <th>Student Id</th>
-                        <th>Teacher Name</th>
-                        <th>Grade</th>
-                        <th>Term</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let resultObj of __result.resultList">
-                        <td (click)="__result.setResultObj(resultObj)">{{resultObj.result_id}}</td>
-                        <td>{{resultObj.student_id}}</td>
-                        <td>{{resultObj.teacher_id}}</td>
-                        <td>{{resultObj.grade}}</td>
-                        <td>{{resultObj.term}}</td>
-                        <td><app-actions></app-actions></td>
-                    </tr>
-                </tbody>
-                <!-- <tbody class="student__table__tbody" *ngFor="let item of teacherObj">
-                    <tr>
-                        <td>{{item.id}}</td>
-                        <td>{{item.first_name}}</td>
-                        <td>{{item.last_name}}</td>
-                        <td>{{item.dob}}</td>
-                        <td>{{item.gender}}</td>
-                        <td>{{item.address}}</td>
-                        <td>{{item.district}}</td>
-                        <td>{{item.contact}}</td>
-                        <td>{{item.grade}}</td>
-                        <td>
-                            <button class="student__edit__button"><span class="student__edit material-symbols-outlined">edit</span></button>
-                            <button class="student__delete__button"><span class="student__delete material-symbols-outlined">delete</span></button>
-                        </td>
-                    </tr>
-                </tbody> -->
-            </table>
+                <table>
+                        <tr  *ngFor="let resultObj of __result.resultList">
+                            <div class="student__list__right">
+                                <div class="student__img">
+                                    <img src="https://t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg" alt="">
+                                </div>
+                                <div class="examresult__details">
+                                    <div class="inner__details">
+                                        <td (click)="__result.setResultObj(resultObj)"> <span>Id :</span> {{resultObj.result_id}} <span> Student Id :</span> {{resultObj.student_id}} <span> Teacher Id : </span>{{resultObj.teacher_id}}</td>
+                                        <td><span>Grade : </span>{{resultObj.grade}} <span> Term : </span> {{resultObj.term}}</td>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="actions__content">
+                                <div>
+                                    <td class="action"><app-actions></app-actions></td>
+                                </div>
+                                <div class="student__actions">
+                                    <button class="student__actions__edit" >Edit</button>
+                                    <button class="student__actions__delete">Delete</button>
+                                </div>
+                            </div>
+                        </tr>
+                    <!-- </tbody> -->
+                    
+                </table>
+               
         </div>
     </div>
 </div>
